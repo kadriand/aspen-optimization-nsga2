@@ -1,0 +1,1425 @@
+MM "34.0" FLAVOR "NO" VERSION "34.0" DATETIME "Mon Nov 14 01:39:42 2016" 
+MACHINE "WIN-NT/VC"  ; 
+startlibrary
+version1
+NumLibs = 2
+Built-In
+ACM Built-In
+NumCats = 10
+Mixers/Splitters
+active
+Separators
+active
+Exchangers
+active
+Columns
+active
+Reactors
+active
+Pressure Changers
+active
+Manipulators
+active
+Solids
+active
+Solids Separators
+active
+User Models
+active
+endlibrary
+; 
+1
+>VERSION 0
+PBR
+RPlug
+Built-In
+RPLUG
+? CUSTOMFORMS FINDER ? ; "METCHEM_MOLE" ; \ PARAM VIEWS = ( 
+"{<FormLayout xmlns=""clr-namespace:AspenTech.AspenPlus.MMForms.CustomForms;ass}" 
+"{embly=AspenTech.AspenPlus.MMForms.CustomForms""><FormLayout.Tabs><TabLayout N}" 
+"{ame=""Tab 1"" GridSettings=""&lt;DataTableLayout FrozenColumnCount=&quot;1&quot}" 
+"{; xmlns=&quot;clr-namespace:AspenTech.AspenPlus.GridControls.Layouts;assembl}" 
+"{y=AspenTech.AspenPlus.GridControls&quot;&gt;&lt;DataTableLayout.ColumnsLayou}" 
+"{t&gt;&lt;DataColumnLayout RenderedWidth=&quot;162&quot; FilterSelectedOperat}" 
+"{or=&quot;StartsWith&quot; /&gt;&lt;/DataTableLayout.ColumnsLayout&gt;&lt;/Da}" 
+"{taTableLayout&gt;""><TabLayout.Columns><ColumnLayout AttributeName=""name"" /><}" 
+"{ColumnLayout AttributeName=""units"" /><ColumnLayout AttributeName=""value"" /><}" 
+"{/TabLayout.Columns><TabLayout.Rows><RowLayout Name=""PBRWT.FINAL_VAL"" Path=""T}" 
+"{op.appModel.Flowsheeting Options.Design-Spec.PBRWT.Output.FINAL_VAL.3"" Value}" 
+"{="""" Units="""" /><RowLayout Name=""PBR.REAC_TEMP"" Path=""Top.appModel.Blocks.PBR}" 
+"{.Input.REAC_TEMP"" Value=""111.4972359"" Units=""C"" /><RowLayout Name=""OUTPUT.ST}" 
+"{R_MAIN"" Path=""Top.appModel.Streams.OUTPUT.Output.STR_MAIN.VFRAC.MIXED"" Value}" 
+"{=""0"" Units="""" /><RowLayout Name=""FEED.FLOW"" Path=""Top.appModel.Streams.FEED.}" 
+"{Input.FLOW.#0.ACACETIC"" Value=""200"" Units=""kmol/hr"" /></TabLayout.Rows></Tab}" 
+"{Layout></FormLayout.Tabs></FormLayout>}" ) \ ? SETUP MAIN ? \ "RUN-CLASS" 
+RUN-CLASS = FLOWSHEET \ \ SIMULATE INTERACTIVE = NO MOLEFLOW = MOLEFLOW 
+VISITED = 1 \ ? SETUP GLOBAL ? \ "IN-UNITS" INSET = METCHEM \ \ "STREAM-CLASS" 
+SCLASS = CONVEN \ ? SETUP DIAGNOSTICS ? ? SETUP "SIM-OPTIONS" ? ; 
+"METCHEM_MOLE" ; ? SETUP "MODEL-OPTION" ? ; "METCHEM_MOLE" ; ? SETUP 
+"CUSTOM-UOM" ? ? SETUP "UNITS-SET" METCBAR ? \ DESCRIPTION DESCRIPTION = 
+"User-defined units set" \ \ MMLOCAL \ \ UNITSET BASESET = MET ( 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 4 3 3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 3 3 3 3 3 5 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 ) \ ? SETUP "UNITS-SET" METCHEM ? \ 
+DESCRIPTION DESCRIPTION = "Metric Units for chemical process applications" \ 
+\ MMLOCAL \ \ UNITSET BASESET = MET ( 3 3 3 3 3 3 3 3 3 3 3 7 18 3 3 5 3 3 3 
+5 3 4 3 3 3 3 1 3 3 3 4 3 7 3 3 3 3 1 4 4 3 3 1 3 3 3 3 3 3 3 3 3 14 3 3 3 3 
+3 3 3 3 3 3 4 3 3 3 3 3 3 3 3 3 3 5 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 ) \ ? SETUP "UNITS-SET" METCKGCM ? \ DESCRIPTION DESCRIPTION = 
+"Metric Units for C, KG/SQCM, GCAL/HR, and CUM" \ \ MMLOCAL \ \ UNITSET 
+BASESET = MET ( 3 3 3 3 3 3 3 3 3 3 3 7 18 3 3 5 3 3 3 8 3 4 3 3 3 3 1 3 3 3 
+4 3 7 3 3 3 3 3 4 4 3 3 3 3 3 3 3 3 3 3 3 3 14 3 3 3 3 3 3 3 3 3 3 4 3 3 3 3 
+3 3 3 3 3 3 8 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 ) \ ? 
+SETUP "UNITS-SET" "SI-CBAR" ? \ DESCRIPTION DESCRIPTION = 
+"International System Units with C, BAR, and /HR" \ \ MMLOCAL \ \ UNITSET 
+BASESET = SI ( 1 1 1 1 1 1 1 1 1 3 3 7 1 1 1 1 1 1 1 5 1 4 1 1 1 1 1 1 1 1 4 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 4 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 ) \ ? SETUP 
+"SYS-OPTIONS" ? ? SETUP "ACCOUNT-INFO" ? ? SETUP "RUN-CONTROL" ? ? SETUP 
+DESCRIPTION ? \ DESCRIP DESCRIP = ( "Chemical Application with Metric Units :" 
+"C, bar, kg/hr, kmol/hr, Gcal/hr, cum/hr." " " "Property Method: NRTL" ) \ ? 
+ODATABANKS ? \ ODATABANKS AUTO-PARAM = YES \ ? DATABANKS ? \ DATABANKS \ ? 
+COMPONENTS MAIN ? \ COMPONENTS CID = AGUA ANAME = H2O OUTNAME = AGUA DBNAME1
+ = "WATER" ANAME1 = "H2O" /  CID = ACACETIC ANAME = C2H4O2-1 OUTNAME = 
+ACACETIC DBNAME1 = "ACETIC-ACID" ANAME1 = "C2H4O2-1" /  CID = "BUT-ACET" 
+ANAME = C6H12O2-1 OUTNAME = "BUT-ACET" DBNAME1 = "N-BUTYL-ACETATE" ANAME1 = 
+"C6H12O2-1" /  CID = BUTANOL ANAME = C4H10O-1 OUTNAME = BUTANOL DBNAME1 = 
+"N-BUTANOL" ANAME1 = "C4H10O-1" \ ? COMPONENTS "ADA/PCS" "LE-PROP-DATA" ? ; 
+"METCHEM_MOLE" ; ? COMPONENTS "COMP-LIST" GLOBAL ? ? COMPONENTS "MOIST-COMPS" 
+? ? COMPONENTS "UNIFAC-GROUP" ? ? SOLVE ? \ "RUN-MODE" MODE = SIM \ ? 
+"INIT-VAR-ATT" ? ? "EO-ALIAS" ? ? SPECGROUPS ? ? CONNECTIONS ? ? "EO-OPTIONS" 
+? ? SCRIPTMETHOD ? ? "DYN-OPTIONS" ? ? FLOWSHEET GLOBAL ? \ BLOCK BLKID = PBR 
+BLKTYPE = RPLUG MDLTYPE = "RPlug" IN = ( FEED M0-1 ) OUT = ( OUTPUT M0-1 ) \ 
+\ "DEF-STREAM" SCLASS = CONVEN \ ? PROPERTIES MAIN ? \ GPROPERTIES GPPROCTYPE
+ = COALPROC GBASEOPSET = "UNIQ-HOC" GOPSETNAME = "UNIQ-HOC" PARCON = -2 \ ? 
+PROPERTIES "OPTION-SETS" NRTL ? \ PARAM BASE = NRTL \ ? PROPERTIES 
+"OPTION-SETS" "UNIQ-HOC" ? \ PARAM BASE = "UNIQ-HOC" \ ? PROPERTIES 
+"MOLEC-STRUCT" ACACETIC ? ? PROPERTIES "MOLEC-STRUCT" AGUA ? ? PROPERTIES 
+"MOLEC-STRUCT" "BUT-ACET" ? ? PROPERTIES "MOLEC-STRUCT" BUTANOL ? ? 
+PROPERTIES PARAMETERS SUMMARY ? ? PROPERTIES PARAMETERS BINARY SCALAR 
+"HOCETA-1" ? ; "METCHEM_MOLE" ; \ PROP-LIST PARAMNAME = HOCETA SETNO = 1 
+UNITROW = 0 BDBANK = ( "APV88 EOS-LIT" ) \ \ BPVAL PARAMNAME2 = HOCETA CID1
+ = AGUA CID2 = AGUA VALUE = "APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = HOCETA 
+CID1 = AGUA CID2 = ACACETIC VALUE = "APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = 
+HOCETA CID1 = AGUA CID2 = "BUT-ACET" VALUE = "APV88 EOS-LIT" \ \ BPVAL 
+PARAMNAME2 = HOCETA CID1 = AGUA CID2 = BUTANOL VALUE = "APV88 EOS-LIT" \ \ 
+BPVAL PARAMNAME2 = HOCETA CID1 = ACACETIC CID2 = AGUA VALUE = "APV88 EOS-LIT" 
+\ \ BPVAL PARAMNAME2 = HOCETA CID1 = ACACETIC CID2 = ACACETIC VALUE = 
+"APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = HOCETA CID1 = ACACETIC CID2 = "BUT-ACET" 
+VALUE = "APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = HOCETA CID1 = ACACETIC CID2 = 
+BUTANOL VALUE = "APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = HOCETA CID1 = "BUT-ACET" 
+CID2 = AGUA VALUE = "APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = HOCETA CID1 = 
+"BUT-ACET" CID2 = ACACETIC VALUE = "APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = 
+HOCETA CID1 = "BUT-ACET" CID2 = "BUT-ACET" VALUE = "APV88 EOS-LIT" \ \ BPVAL 
+PARAMNAME2 = HOCETA CID1 = "BUT-ACET" CID2 = BUTANOL VALUE = "APV88 EOS-LIT" 
+\ \ BPVAL PARAMNAME2 = HOCETA CID1 = BUTANOL CID2 = AGUA VALUE = 
+"APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = HOCETA CID1 = BUTANOL CID2 = ACACETIC 
+VALUE = "APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = HOCETA CID1 = BUTANOL CID2 = 
+"BUT-ACET" VALUE = "APV88 EOS-LIT" \ \ BPVAL PARAMNAME2 = HOCETA CID1 = 
+BUTANOL CID2 = BUTANOL VALUE = "APV88 EOS-LIT" \ ? PROPERTIES PARAMETERS 
+BINARY SCALAR "MLQKIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = MLQKIJ 
+SETNO = 1 UNITROW = 0 \ ? PROPERTIES PARAMETERS BINARY SCALAR "RKTKIJ-1" ? ; 
+"METCHEM_MOLE" ; \ PROP-LIST PARAMNAME = RKTKIJ SETNO = 1 UNITROW = 0 \ ? 
+PROPERTIES PARAMETERS BINARY "T-DEPENDENT" "ANDKIJ-1" ? ; "ENG_MOLE" ; \ 
+PROP-LIST PARAMNAME = ANDKIJ SETNO = 1 UNITROW = 0 TUNITROW = 22 TUNITLABEL
+ = F NEL = 2 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" "ANDMIJ-1" ? ; 
+"ENG_MOLE" ; \ PROP-LIST PARAMNAME = ANDMIJ SETNO = 1 UNITROW = 0 TUNITROW = 
+22 TUNITLABEL = F NEL = 2 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" 
+"HENRY-1" ? ; "METCHEM_MOLE" ; \ PROP-LIST PARAMNAME = HENRY SETNO = 1 
+UNITROW = 20 UNITLABEL = bar TUNITROW = 22 TUNITLABEL = C BDBANK = ( 
+"APV88 BINARY" ) NEL = 7 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" 
+"MUKIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = MUKIJ SETNO = 1 UNITROW = 0 
+TUNITROW = 22 TUNITLABEL = F NEL = 6 \ ? PROPERTIES PARAMETERS BINARY 
+"T-DEPENDENT" "MULIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = MULIJ SETNO
+ = 1 UNITROW = 0 TUNITROW = 22 TUNITLABEL = F NEL = 11 \ ? PROPERTIES 
+PARAMETERS BINARY "T-DEPENDENT" "NRTL-1" ? ; "METCHEM_MOLE" ; \ PROP-LIST 
+PARAMNAME = NRTL SETNO = 1 UNITROW = 0 TUNITROW = 22 TUNITLABEL = C BDBANK = 
+( "APV88 VLE-IG" "APV88 LLE-ASPEN" "APV88 VLE-LIT" ) NEL = 12 ESTIMATE = NO \ 
+\ BPVAL PARAMNAME2 = NRTL CID1 = AGUA CID2 = "BUT-ACET" UNITROW2 = 0 
+TUNITROW2 = 22 TUNITLABEL2 = C VAL1 = "APV88 VLE-IG" VAL2 = "APV88 VLE-IG" 
+VAL3 = "APV88 VLE-IG" VAL4 = "APV88 VLE-IG" VAL5 = "APV88 VLE-IG" VAL6 = 
+"APV88 VLE-IG" VAL7 = "APV88 VLE-IG" VAL8 = "APV88 VLE-IG" VAL9 = 
+"APV88 VLE-IG" VAL10 = "APV88 VLE-IG" VAL11 = "APV88 VLE-IG" VAL12 = 
+"APV88 VLE-IG" /  PARAMNAME2 = NRTL CID1 = AGUA CID2 = BUTANOL UNITROW2 = 0 
+TUNITROW2 = 22 TUNITLABEL2 = C VAL1 = "APV88 VLE-IG" VAL2 = "APV88 VLE-IG" 
+VAL3 = "APV88 VLE-IG" VAL4 = "APV88 VLE-IG" VAL5 = "APV88 VLE-IG" VAL6 = 
+"APV88 VLE-IG" VAL7 = "APV88 VLE-IG" VAL8 = "APV88 VLE-IG" VAL9 = 
+"APV88 VLE-IG" VAL10 = "APV88 VLE-IG" VAL11 = "APV88 VLE-IG" VAL12 = 
+"APV88 VLE-IG" /  PARAMNAME2 = NRTL CID1 = "BUT-ACET" CID2 = BUTANOL UNITROW2
+ = 0 TUNITROW2 = 22 TUNITLABEL2 = C VAL1 = "APV88 VLE-IG" VAL2 = "APV88 VLE-IG" 
+VAL3 = "APV88 VLE-IG" VAL4 = "APV88 VLE-IG" VAL5 = "APV88 VLE-IG" VAL6 = 
+"APV88 VLE-IG" VAL7 = "APV88 VLE-IG" VAL8 = "APV88 VLE-IG" VAL9 = 
+"APV88 VLE-IG" VAL10 = "APV88 VLE-IG" VAL11 = "APV88 VLE-IG" VAL12 = 
+"APV88 VLE-IG" \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" "UNIQ-1" ? ; 
+"METCHEM_MOLE" ; \ PROP-LIST PARAMNAME = UNIQ SETNO = 1 UNITROW = 0 TUNITROW
+ = 22 TUNITLABEL = K BDBANK = ( "APV88 VLE-IG" "APV88 LLE-LIT" 
+"APV88 LLE-ASPEN" "APV88 VLE-LIT" ) NEL = 12 \ \ BPVAL PARAMNAME2 = UNIQ CID1
+ = ACACETIC CID2 = BUTANOL UNITROW2 = 0 TUNITROW2 = 22 TUNITLABEL2 = K UVAL3
+ = 66.315 <0> <0> UVAL4 = -74.62672 <0> <0> /  PARAMNAME2 = UNIQ CID1 = 
+ACACETIC CID2 = "BUT-ACET" UNITROW2 = 0 TUNITROW2 = 22 TUNITLABEL2 = K UVAL1
+ = 0 <0> <0> UVAL3 = 150.193 <0> <0> UVAL4 = -358.447 <0> <0> /  PARAMNAME2
+ = UNIQ CID1 = ACACETIC CID2 = AGUA UNITROW2 = 0 TUNITROW2 = 22 TUNITLABEL2
+ = K UVAL3 = 172.92 <0> <0> UVAL4 = -265.6904 <0> <0> /  PARAMNAME2 = UNIQ 
+CID1 = BUTANOL CID2 = "BUT-ACET" UNITROW2 = 0 TUNITROW2 = 22 TUNITLABEL2 = K 
+UVAL1 = 0 <0> <0> UVAL3 = -41.53679 <0> <0> UVAL4 = -12.4 <0> <0> /  
+PARAMNAME2 = UNIQ CID1 = BUTANOL CID2 = AGUA UNITROW2 = 0 TUNITROW2 = 22 
+TUNITLABEL2 = K UVAL1 = 0 <0> <0> UVAL3 = -34.227 <0> <0> UVAL4 = -292.4746 
+<0> <0> /  PARAMNAME2 = UNIQ CID1 = "BUT-ACET" CID2 = AGUA UNITROW2 = 0 
+TUNITROW2 = 22 TUNITLABEL2 = K UVAL1 = 0 <0> <0> UVAL3 = -345.098 <0> <0> 
+UVAL4 = -232.247 <0> <0> \ ? PROPERTIES "ATTR-COMPS" ? ? POLYMERS ? ? 
+"ATTR-SCALING" ? ; "METCHEM_MOLE" ; ? "STREAM-CLASS" SUBSTREAMS ? \ 
+DEF-SUBS-CLA SUBSTREAMS = MIXED \ \ DEF-SUBS-CLA SUBSTREAMS = CISOLID \ \ 
+DEF-SUBS-CLA SUBSTREAMS = NC \ \ DEF-SUBS-CLA SUBSTREAMS = NCPSD \ \ 
+DEF-SUBS-CLA SUBSTREAMS = CIPSD \ ? "STREAM-CLASS" "DEF-STREAMS" ? ? "PROP-SET" 
+MAIN HXDESIGN ? ; "METCHEM_MOLE" ; \ P1 ID = MASSVFRA \ \ P1 ID = MASSFLMX 
+UNITS = ( "kg/sec" ) \ \ P1 ID = HMX UNITS = ( "J/kg" ) \ \ P1 ID = RHOMX 
+UNITS = ( "kg/cum" ) \ \ P1 ID = CPMX UNITS = ( "J/kg-K" ) \ \ P1 ID = PCMX 
+UNITS = ( "N/sqm" ) \ \ P1 ID = MUMX UNITS = ( "N-sec/sqm" ) \ \ P1 ID = KMX 
+UNITS = ( "Watt/m-K" ) \ \ P1 ID = SIGMAMX UNITS = ( "N/m" ) \ \ P1 ID = MWMX 
+\ \ P2 PHASE = ( T V L ) SYSPRES = YES \ \ DESCRIPTION DESCRIPTION = 
+"Thermal and transport, for heat exchanger design" \ ? "PROP-SET" MAIN 
+THERMAL ? ; "METCHEM_MOLE" ; \ P1 ID = HMX UNITS = ( "kcal/kg" ) \ \ P1 ID = 
+CPMX UNITS = ( "cal/gm-K" ) \ \ P1 ID = KMX \ \ P2 SUBSTREAM = MIXED PHASE = 
+( V L ) SYSPRES = YES \ \ DESCRIPTION DESCRIPTION = 
+"Enthalpy, heat capacity, and thermal conductivity" \ ? "PROP-SET" MAIN 
+TXPORT ? ; "METCHEM_MOLE" ; \ P1 ID = RHOMX UNITS = ( "gm/cc" ) \ \ P1 ID = 
+MUMX \ \ P1 ID = SIGMAMX \ \ P2 SUBSTREAM = MIXED PHASE = ( V L ) SYSPRES = 
+YES \ \ DESCRIPTION DESCRIPTION = "Density, viscosity, and surface tension" \ 
+? "PROP-SET" MAIN VLE ? ; "METCHEM_MOLE" ; \ P1 ID = PHIMX \ \ P1 ID = GAMMA 
+\ \ P1 ID = PL \ \ P2 SUBSTREAM = MIXED PHASE = ( V L ) SYSPRES = YES \ \ 
+DESCRIPTION DESCRIPTION = "Fugacity, activity, and vapor pressure" \ ? 
+"PROP-SET" MAIN VLLE ? ; "METCHEM_MOLE" ; \ P1 ID = PHIMX \ \ P1 ID = GAMMA \ 
+\ P1 ID = PL \ \ P2 SUBSTREAM = MIXED PHASE = ( V L1 L2 ) SYSPRES = YES \ \ 
+DESCRIPTION DESCRIPTION = "Fugacity, activity, and vapor pressure" \ ? 
+"STREAM-NAMES" ? ? STREAM MATERIAL FEED ? ; "METCHEM_MOLE" ; \ SUBSTREAM SSID
+ = MIXED TEMP = 110. <22> <4> PRES = 1.8 <20> <5> BASIS = "MOLE-FLOW" TOTAL
+ = 400. <-89> <0> JUNK = 4 \ \ MOLE-FLOW SSID1 = MIXED CID = AGUA FLOW = 0. 
+<-89> <3> /  SSID1 = MIXED CID = ACACETIC FLOW = 200. <-89> <3> /  SSID1 = 
+MIXED CID = "BUT-ACET" FLOW = 0. <-89> <3> /  SSID1 = MIXED CID = BUTANOL 
+FLOW = 200. <-89> <3> \ ? BLOCK RPLUG PBR ? ; "METCHEM_MOLE" ; ; ICON1 ; \ 
+PARAM TYPE = ADIABATIC NTUBE = 100 LENGTH = 3. <17> <1> DIAM = 10. <17> <4> 
+NPHASE = 2 PRES = 1.8 <20> <5> OPT-TSPEC = "CONST-TEMP" CHK-NTUBE = YES CATWT
+ = 100. <18> <1> IGN-CAT-VOL = NO CAT-PRESENT = YES CAT-RHO = 608. <3> <1> 
+OPT-DIA = CONSTANT REAC-TEMP = 111.4972359 <22> <4> \ \ PRODUCTS SID = OUTPUT 
+\ \ "BLOCK-OPTION" BLKOPFREWAT = NO \ \ REACTIONS RXN-ID = ( PFR ) \ ? 
+COSTING OPTIONS ? ; "METCHEM_MOLE" ; ? COSTING "LABOR-COST" ? ; "METCHEM_MOLE" 
+; ? COSTING "CAPITAL-COST" ? ; "METCHEM_MOLE" ; ? COSTING OPERATING ? ; 
+"METCHEM_MOLE" ; ? COSTING PROFIT ? ; "METCHEM_MOLE" ; ? CURRENCY ? ? 
+"STREAM-PRICE" ? ; "METCHEM_MOLE" ; ? "DESIGN-SPEC" PBRWT ? ; "METCHEM_MOLE" 
+; \ DEFINE FVN = BUAC FVN-VARTYPE = "MOLE-FLOW" FVN-STREAM = OUTPUT FVN-SUBS
+ = MIXED FVN-COMPONEN = "BUT-ACET" FVN-UOM = "kmol/hr" OPT-CATEG = STREAM \ \ 
+SPEC EXPR1 = "BUAC" EXPR2 = "100" \ \ "TOL-SPEC" TOL = "0.001" \ \ VARY 
+VARY-VARTYPE = "BLOCK-VAR" VARYBLOCK = PBR VARYVARIABLE = CATWT VARYSENTENCE
+ = PARAM VARYUOM = kg \ \ LIMITS LOWER = "100" UPPER = "1000" \ ? 
+"EO-CONV-OPTI" ? \ DMO-PARAMS MODE = DEFAULT \ \ DMO-PARAMS MODE = SIMULATION 
+\ \ DMO-PARAMS MODE = "PARAMETER-ESTIMATION" \ \ DMO-PARAMS MODE = 
+RECONCILIATION \ \ DMO-PARAMS MODE = OPTIMIZATION \ \ LSSQP-PARAMS MODE-L = 
+DEFAULT \ \ LSSQP-PARAMS MODE-L = SIMULATION \ \ LSSQP-PARAMS MODE-L = 
+"PARAMETER-ESTIMATION" \ \ LSSQP-PARAMS MODE-L = RECONCILIATION \ \ 
+LSSQP-PARAMS MODE-L = OPTIMIZATION \ \ NSOLVE-PARAM NSOLVE-MODE = DEFAULT \ \ 
+NSOLVE-PARAM NSOLVE-MODE = SIMULATION \ \ NSOLVE-PARAM NSOLVE-MODE = 
+"PARAMETER-ESTIMATION" \ \ XSLP-PARAMS XSLP-MODE = DEFAULT \ \ XSLP-PARAMS 
+XSLP-MODE = SIMULATION \ \ XSLP-PARAMS XSLP-MODE = "PARAMETER-ESTIMATION" \ \ 
+XSLP-PARAMS XSLP-MODE = RECONCILIATION \ \ XSLP-PARAMS XSLP-MODE = 
+OPTIMIZATION \ ? "CONV-OPTIONS" ? ? TEAR ? ? "CONV-ORDER" ? ? REPORT REPORT ? 
+? REPORT "BLOCK-REPORT" ? ? REPORT "STREAM-REPOR" ? \ OPTIONS MOLEFLOW = 
+MOLEFLOW \ ? REPORT "FLOWSHEET-RE" ? ? REPORT "PROPERTY-REP" ? ? REPORT 
+"ADA-REPORT" ? ? REACTIONS LHHW PFR ? ; "METCHEM_MOLE" ; \ REAC-DATA 
+R-D-REACNO = 1 R-D-CBASIS = "MOLE-GAMMA" R-D-RBASIS = "CAT-WT" PRE-EXP = 
+431674575.2 <0> <0> ACT-ENERGY = 72896. <39> <10> \ \ STOIC REACNO = 1 
+STOIC-CID = BUTANOL STOIC-SUBS = MIXED COEF = -1. <0> <0> EXPONENT = 1. <0> 
+<0> EXPON = 0. <0> <0> /  REACNO = 1 STOIC-CID = ACACETIC STOIC-SUBS = MIXED 
+COEF = -1. <0> <0> EXPONENT = 1. <0> <0> EXPON = 0. <0> <0> \ \ STOIC1 
+REACNO1 = 1 STOIC-CID1 = "BUT-ACET" STOIC-SUBS1 = MIXED COEF1 = 1. <0> <0> 
+EXPONENT1 = 0. <0> <0> EXPON1 = 1. <0> <0> /  REACNO1 = 1 STOIC-CID1 = AGUA 
+STOIC-SUBS1 = MIXED COEF1 = 1. <0> <0> EXPONENT1 = 0. <0> <0> EXPON1 = 2. <0> 
+<0> \ \ DFORCE-EQ-1 REACNO-DF1 = 1 DF1-A = 0. <0> <0> \ \ DFORCE-EQ-2 
+REACNO-DF2 = 1 DF2-A = -1.340433652 <0> <0> DF2-B = -430.803464 <0> <0> DF2-C
+ = 0. <0> <0> \ \ ADSORP-EXP ADS-REACNO = 1 ADS-CID = ACACETIC ADS-SUBS = 
+MIXED ADS-EXPONENT = ( 0. <0> <0> 1. <0> <0> 0. <0> <0> 0. <0> <0> 0. <0> <0> 
+) /  ADS-REACNO = 1 ADS-CID = BUTANOL ADS-SUBS = MIXED ADS-EXPONENT = ( 0. 
+<0> <0> 0. <0> <0> 1. <0> <0> 0. <0> <0> 0. <0> <0> ) /  ADS-REACNO = 1 
+ADS-CID = "BUT-ACET" ADS-SUBS = MIXED ADS-EXPONENT = ( 0. <0> <0> 0. <0> <0> 
+0. <0> <0> 1. <0> <0> 0. <0> <0> ) /  ADS-REACNO = 1 ADS-CID = AGUA ADS-SUBS
+ = MIXED ADS-EXPONENT = ( 0. <0> <0> 0. <0> <0> 0. <0> <0> 0. <0> <0> 2. <0> 
+<0> ) \ \ ADSORP-EQTER ADS-EQ-RCNO = 1 ADS-TERM = 1 ADS-A = 0. <0> <0> ADS-B
+ = 0. <0> <0> /  ADS-EQ-RCNO = 1 ADS-TERM = 2 ADS-A = 1.493375895 <0> <0> /  
+ADS-EQ-RCNO = 1 ADS-TERM = 3 ADS-A = 1.934574717 <0> <0> /  ADS-EQ-RCNO = 1 
+ADS-TERM = 4 ADS-A = 1.280794947 <0> <0> /  ADS-EQ-RCNO = 1 ADS-TERM = 5 
+ADS-A = 2.200596663 <0> <0> \ \ ADSORP-POW ADS-PW-RCNO = 1 ADS-PW-EXP = 2. 
+<0> <0> NEXP = 5 NTERM = 5 \ \ PARAM NTERM-ADS = 5 \ \ FORCONTROL FCVAR1 = 
+BUTANOL \ ? "STREAM-LIB" ? ; "METCHEM_MOLE" ; ? "ADD-INPUT" "ADD-BEFORE" ? ? 
+"ADD-INPUT" "ADD-AFTER" ? 
+
+ GRAPHICS_BACKUP
+PFS V 5.00
+$CONFIG
+paramdata APV88 ENRTL-RK
+paramdata APV88 VLE-IG
+paramdata APV88 VLE-RK
+paramdata APV88 VLE-HOC
+paramdata APV88 LLE-LIT
+paramdata APV88 LLE-ASPEN
+paramdata APV88 VLE-LIT
+paramdata APV88 BINARY
+paramdata APV88 EOS-LIT
+paramdata APV88 HENRY-AP
+paramdata APV88 SRK-ASPEN
+paramdata APV88 PC-SAFT
+paramdata APV88 POLYPCSF
+paramdata APV88 HYSYS
+paramdata APEOSV88 AP-EOS
+purebank APV88 PURE28
+purebank APV88 AQUEOUS
+purebank APV88 SOLIDS
+purebank APV88 INORGANIC
+purebank APEOSV88 AP-EOS
+regdbank 1
+ftn_check 1
+autoblockid 1
+autostreamid 1
+showblockid 1
+showstreamid 1
+autoplacement 1
+grid 2
+gridresolution 0.100000
+scale 0
+blockprefix B
+labelscale 1.000000
+3DOn 0
+qwformat %.0f
+tempformat %.0f
+presformat %.0f
+flowformat %.0f
+strmqwformat %.0f
+vflowformat %.0f
+mflowformat %.2f
+vfracformat %.0f
+pseudobatch 0
+partial 1
+animation 1
+runanyway 0
+globalqw 0
+globaltemp 0
+globalpres 0
+globalflow 0
+globalstrmqw 0
+globalvflow 0
+globalmflow 0
+globalvfrac 0
+tooldrawvisible 0
+browserheight 6375
+browserwidth 9000
+browsertreewidth 2370
+polyplusenabled 1
+dynaplusenabled 1
+bfracenabled 1
+rtfenabled 1
+rspenabled 0
+initializeicarus 17
+pinchenabled 0
+linklimit 5000
+material_color 0
+material_style 0
+material_width 1
+material_termid  
+heat_color 0
+heat_style 2
+heat_width 1
+heat_termid Q
+work_color 0
+work_style 1
+work_width 1
+work_termid W
+connections_color 9
+connections_style 3
+connections_width 1
+connections_termid C
+measurements_color 4
+measurements_style 3
+measurements_width 1
+measurements_termid M
+displayeoconn 0
+displaycalcs 1
+displaytransfers 0
+displaymeas 0
+displaydesignspecs 1
+displaycalccons 0
+displaymeascons 0
+displayothercons 0
+displayeomeas 1
+displayeomeastype 2
+displayothermanipconn 0
+showeoviews 0
+eoautosave 1
+lockflowsheet 0
+allow_system_userprops 0
+copy_estimation 1
+copy_retrieved 1
+purge_incomp_params 0
+set_default_biparams 0
+set_default_dataset1 0
+set_default_dataset0 1
+bestinput 0
+autosmrun 0
+genallpropset 1
+strmresformdefault 0
+roottype 1
+exchangerfile 1
+streamformat 1
+runsettingfile 1
+usermodelfile 1
+fortranfile 0
+timeout 1000
+auto_evaluate 0
+customglobaldatapropset1 0 | Custom1 | * | %.2f | 0 | 6
+customglobaldatapropset2 0 | Custom2 | * | %.2f | 1 | 7
+customglobaldatapropset3 0 | Custom3 | * | %.2f | 2 | 8
+customglobaldatapropset4 0 | Custom4 | * | %.2f | 4 | 9
+customglobaldatapropset5 0 | Custom5 | * | %.2f | 5 | 10
+customglobaldatapropset6 0 | Custom6 | * | %.2f | 6 | 11
+economics_active 0
+ignoreEOVarNameFixupsOnImport 1
+tpsaupgrade 0
+#
+$_APWNSHELL_SETTINGS
+<CommonShellSettings xmlns="http://schemas.aspentech.com/xaml/presentation/visualisation/commonshell" xmlns:atapmaa="clr-namespace:AspenTech.AspenPlus.Modules.ApwnApplication;assembly=ApwnShell" xmlns:atapie="clr-namespace:AspenTech.AspenPlus.Infrastructure.Events;assembly=AspenTech.AspenPlus.Infrastructure" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:apmab="clr-namespace:AspenPlus.Modules.ApwnBrowser;assembly=ApwnShell" xmlns:cxv="http://schemas.aspentech.com/xaml/presentation/cxsviewmodel" xmlns:atapi="clr-namespace:AspenTech.AspenPlus.Infrastructure;assembly=AspenTech.AspenPlus.Infrastructure">
+  <CommonShellSettings.CurrentWorkspace>
+    <ShellWorkspace ActivationBarState="&lt;DashboardPanel IsExpanded=&quot;false&quot; Version=&quot;34&quot;&gt;&#xD;&#xA;  &lt;Item Type=&quot;AspenTech.ActivationDashboard.EconomicAnalysis.DashboardItem&quot;&gt;&amp;lt;!--This is the current state of Economics Analysis Dashboard--&amp;gt;&#xD;&#xA;&amp;lt;Root&amp;gt;&#xD;&#xA;  &amp;lt;OnOffState Value=&quot;Off&quot; /&amp;gt;&#xD;&#xA;  &amp;lt;CapitalCost Value=&quot;&quot; Units=&quot;USD&quot; /&amp;gt;&#xD;&#xA;  &amp;lt;UtilityCost Value=&quot;&quot; Units=&quot;USD/Year&quot; /&amp;gt;&#xD;&#xA;  &amp;lt;HasError&amp;gt;false&amp;lt;/HasError&amp;gt;&#xD;&#xA;  &amp;lt;_statusCode Value=&quot;-1&quot; /&amp;gt;&#xD;&#xA;  &amp;lt;StatusText Value=&quot;&quot; /&amp;gt;&#xD;&#xA;  &amp;lt;Flags&amp;gt;&#xD;&#xA;    &amp;lt;_isRunCompleted Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_isRunning Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_incompleteButActivated Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_incompleteButLoaded Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_incompleteButSized Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_incompleteButMapped Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_completeEvaluatedNotAutoRun Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_isSimulationChanged Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_isInStopping Value=&quot;false&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_isOnOffButtonCanBeUsed Value=&quot;true&quot; /&amp;gt;&#xD;&#xA;    &amp;lt;_isResetDashboardButLeaveItOn Value=&quot;true&quot; /&amp;gt;&#xD;&#xA;  &amp;lt;/Flags&amp;gt;&#xD;&#xA;&amp;lt;/Root&amp;gt;&lt;/Item&gt;&#xD;&#xA;  &lt;Item Type=&quot;AspenTech.ActivationDashboard.EnergyAnalysis.DashboardItem&quot;&gt;&amp;lt;!--This is the current state of Energy Analysis Dashboard--&amp;gt;&#xD;&#xA;&amp;lt;Root&amp;gt;&#xD;&#xA;  &amp;lt;IsExpanded&amp;gt;false&amp;lt;/IsExpanded&amp;gt;&#xD;&#xA;  &amp;lt;OnOff&amp;gt;Off&amp;lt;/OnOff&amp;gt;&#xD;&#xA;  &amp;lt;Status&amp;gt;NotReady&amp;lt;/Status&amp;gt;&#xD;&#xA;  &amp;lt;PUS&amp;gt;&amp;lt;/PUS&amp;gt;&#xD;&#xA;  &amp;lt;Percent&amp;gt;&amp;lt;/Percent&amp;gt;&#xD;&#xA;  &amp;lt;Units&amp;gt;MW&amp;lt;/Units&amp;gt;&#xD;&#xA;&amp;lt;/Root&amp;gt;&lt;/Item&gt;&#xD;&#xA;  &lt;Item Type=&quot;AspenTech.ActivationDashboard.EdrActivation.DashboardItem&quot;&gt;&amp;lt;EDR&amp;gt;&#xD;&#xA;  &amp;lt;IsShowModelStatus&amp;gt;false&amp;lt;/IsShowModelStatus&amp;gt;&#xD;&#xA;  &amp;lt;IsShowRiskStatus&amp;gt;false&amp;lt;/IsShowRiskStatus&amp;gt;&#xD;&#xA;  &amp;lt;IsShowLegend&amp;gt;false&amp;lt;/IsShowLegend&amp;gt;&#xD;&#xA;  &amp;lt;DetailCount&amp;gt;0&amp;lt;/DetailCount&amp;gt;&#xD;&#xA;&amp;lt;/EDR&amp;gt;&lt;/Item&gt;&#xD;&#xA;&lt;/DashboardPanel&gt;" Layout="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#xD;&#xA;&lt;xamDockManager version=&quot;13.1.20131.2073&quot;&gt;&#xD;&#xA;  &lt;contentPanes&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen3&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-14T06:39:40.7224252Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen8&quot; location=&quot;Document&quot; lastDockableState=&quot;Floating&quot; lastFloatingSize=&quot;1714,880&quot; lastFloatingWindowRect=&quot;994,97,1730,919&quot; lastFloatingLocation=&quot;994,97&quot; lastActivatedTime=&quot;2016-11-14T05:49:08.1013393Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;FlowsheetScreenFactory&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-14T05:49:01.4517114Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen7&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-14T05:48:45.0743492Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen6&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-14T05:48:38.0026427Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen9&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-14T01:58:30.2086104Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen1&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-14T01:58:25.4458936Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen5&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-13T19:40:14.6736516Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen2&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-13T05:52:03.0915789Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;_AnonymousScreen4&quot; location=&quot;Document&quot; lastActivatedTime=&quot;2016-11-13T05:30:34.6536472Z&quot; /&gt;&#xD;&#xA;    &lt;contentPane name=&quot;ModelLibraryScreenFactoryKey&quot; location=&quot;Unpinned&quot; lastDockableState=&quot;Docked&quot; lastActivatedTime=&quot;2014-10-29T12:43:11.6382514Z&quot; unpinnedOrder=&quot;0&quot; /&gt;&#xD;&#xA;  &lt;/contentPanes&gt;&#xD;&#xA;  &lt;panes&gt;&#xD;&#xA;    &lt;splitPane name=&quot;Z458a44eef7d248f590df20664ca057fe&quot; splitterOrientation=&quot;Vertical&quot; location=&quot;DockedBottom&quot;&gt;&#xD;&#xA;      &lt;contentPane name=&quot;ModelLibraryScreenFactoryKey&quot; /&gt;&#xD;&#xA;    &lt;/splitPane&gt;&#xD;&#xA;    &lt;splitPane name=&quot;Z8b7f05a6245447d99a3f183aa47f6eac&quot; splitterOrientation=&quot;Vertical&quot; location=&quot;Floating&quot; floatingLocation=&quot;994,97&quot; floatingSize=&quot;1714,880&quot;&gt;&#xD;&#xA;      &lt;contentPane name=&quot;_AnonymousScreen8&quot; /&gt;&#xD;&#xA;    &lt;/splitPane&gt;&#xD;&#xA;  &lt;/panes&gt;&#xD;&#xA;  &lt;documents splitterOrientation=&quot;Vertical&quot;&gt;&#xD;&#xA;    &lt;splitPane name=&quot;Z6d8d8fbd965d4e0d91fb854d0a2fa6ea&quot; splitterOrientation=&quot;Vertical&quot;&gt;&#xD;&#xA;      &lt;tabGroup name=&quot;Z3a152919f891454fbed6c5100b2740cf&quot; selectedIndex=&quot;5&quot; relativeSize=&quot;109.860788863109,100&quot;&gt;&#xD;&#xA;        &lt;contentPane name=&quot;FlowsheetScreenFactory&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen4&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen6&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen2&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen7&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen3&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen8&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen5&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen1&quot; /&gt;&#xD;&#xA;        &lt;contentPane name=&quot;_AnonymousScreen9&quot; /&gt;&#xD;&#xA;      &lt;/tabGroup&gt;&#xD;&#xA;    &lt;/splitPane&gt;&#xD;&#xA;  &lt;/documents&gt;&#xD;&#xA;&lt;/xamDockManager&gt;" NavigationGroupToSelect="Simulation" IsNavigationPaneMinimized="False" IsRibbonMinimized="True">
+      <ShellWorkspace.Screens>
+        <WorkspaceScreenData PaneName="_AnonymousScreen3" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Flowsheet.Custom Tables.FINDER" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMCustomForms.CustomForm" FormKey="Flowsheet.Custom Tables.FINDER" Header="Custom Tables - FINDER" ResultsOnly="False" PathKey="Top.appModelV8.Flowsheet.Custom Forms.FINDER">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="id">FINDER</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Flowsheet.Custom Forms.FINDER</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Flowsheet.Custom Forms.FINDER" />
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Flowsheet.Custom Forms.FINDER" />
+                <cxv:CxvParameter Name="id" Value="FINDER" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="_AnonymousScreen8" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Streams.FEED" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMMATERIAL.MMMATERIAL_INPUT" FormKey="Streams.FEED" Header="FEED (MATERIAL)" ResultsOnly="False" PathKey="Top.appModelV8.Streams.FEED">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="id">FEED</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Streams.FEED</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Streams.FEED">
+                  <apmab:ApwnPlotwizardRule.ProgId>
+                    <s:String>WpfPLDISCURVES.RibbonPlotWizardMgr</s:String>
+                  </apmab:ApwnPlotwizardRule.ProgId>
+                </apmab:ApwnPlotwizardRule>
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Streams.FEED" />
+                <cxv:CxvParameter Name="id" Value="FEED" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+                <cxv:CxvParameter Name="SpecOpt1" Value="Temperature" />
+                <cxv:CxvParameter Name="SpecOpt2" Value="Pressure" />
+                <cxv:CxvParameter Name="SUBSTRID" Value="MIXED" />
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="FlowsheetScreenFactory" ScreenFactoryKey="FlowsheetScreenFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapi:StringScreenSubject subject="" fatherNodePath="{assembly:Null}" NavigationGroupKey="Simulation" />
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <ScreenState Zoom="5.700001" />
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="_AnonymousScreen7" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Blocks.PBR.Setup" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMRPLUG.MMRPLUG_SETUP" FormKey="Blocks.PBR.Setup" Header="PBR (RPlug) - Setup" ResultsOnly="False" PathKey="Top.appModelV8.Blocks.PBR">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="id">PBR</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Blocks.PBR</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule IsHierarchy="True" ContextPath="Top.appModelV8.Blocks.PBR">
+                  <apmab:ApwnPlotwizardRule.ProgId>
+                    <s:String>WpfPLSOLID.RibbonPlotWizardMgr</s:String>
+                    <s:String>WpfPLRPLUG.RibbonPlotWizardMgr</s:String>
+                  </apmab:ApwnPlotwizardRule.ProgId>
+                </apmab:ApwnPlotwizardRule>
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Blocks.PBR" />
+                <cxv:CxvParameter Name="id" Value="PBR" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+                <cxv:CxvParameter Name="para2" Value="Reactor dimensions" />
+                <cxv:CxvParameter Name="selected_tab" Value="tab0" />
+                <cxv:CxvParameter Name="para1" Value="Tube dimensions" />
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="_AnonymousScreen6" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Blocks.PBR.Results" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMRPLUG.MMRPLUG_RESULT" FormKey="Blocks.PBR.Results" Header="PBR (RPlug) - Results" ResultsOnly="True" PathKey="Top.appModelV8.Blocks.PBR">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="id">PBR</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Blocks.PBR</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule IsHierarchy="True" ContextPath="Top.appModelV8.Blocks.PBR">
+                  <apmab:ApwnPlotwizardRule.ProgId>
+                    <s:String>WpfPLSOLID.RibbonPlotWizardMgr</s:String>
+                    <s:String>WpfPLRPLUG.RibbonPlotWizardMgr</s:String>
+                  </apmab:ApwnPlotwizardRule.ProgId>
+                </apmab:ApwnPlotwizardRule>
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Blocks.PBR" />
+                <cxv:CxvParameter Name="id" Value="PBR" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+                <cxv:CxvParameter Name="selected_tab" Value="tab0" />
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="_AnonymousScreen9" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Results Summary.Run Status" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMRun_Stat.MMRun_Status" FormKey="Results Summary.Run Status" Header="Results Summary - Run Status" ResultsOnly="True" PathKey="Top.appModelV8.Results Summary">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="extra_message_path">Run-Status</s:String>
+                    <s:String assembly:Key="id">Results Summary</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Results Summary</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Results Summary" />
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="extra_message_path" Value="Run-Status" />
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Results Summary" />
+                <cxv:CxvParameter Name="id" Value="Results Summary" />
+                <cxv:CxvParameter Name="ParamVersionLabel" Value="Aspen Plus Version" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+                <cxv:CxvParameter Name="smain" Value="Top.appModelV8.Results Summary.Run-Status" />
+                <cxv:CxvParameter Name="selected_tab" Value="tabStatus1" />
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="_AnonymousScreen1" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Blocks.PBR.Summary" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMSummaryGrid.MMSummaryGrid_Main" FormKey="Blocks.PBR.Summary" Header="PBR (RPlug) - Summary" ResultsOnly="False" PathKey="Top.appModelV8.Blocks.PBR">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="id">PBR</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Blocks.PBR</s:String>
+                    <s:Int32 assembly:Key="MMHelpCode">287</s:Int32>
+                    <s:String assembly:Key="MMHelpFile">userguide3.chm</s:String>
+                    <s:String assembly:Key="SGType">Block</s:String>
+                    <s:String assembly:Key="XMLObjFilter">UnitOpt</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule IsHierarchy="True" ContextPath="Top.appModelV8.Blocks.PBR">
+                  <apmab:ApwnPlotwizardRule.ProgId>
+                    <s:String>WpfPLSOLID.RibbonPlotWizardMgr</s:String>
+                    <s:String>WpfPLRPLUG.RibbonPlotWizardMgr</s:String>
+                  </apmab:ApwnPlotwizardRule.ProgId>
+                </apmab:ApwnPlotwizardRule>
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="SGType" Value="Block" />
+                <cxv:CxvParameter Name="XMLObjFilter" Value="UnitOpt" />
+                <cxv:CxvParameter Name="MMHelpCode">
+                  <cxv:CxvParameter.Value>
+                    <s:Int32>287</s:Int32>
+                  </cxv:CxvParameter.Value>
+                </cxv:CxvParameter>
+                <cxv:CxvParameter Name="MMHelpFile" Value="userguide3.chm" />
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Blocks.PBR" />
+                <cxv:CxvParameter Name="id" Value="PBR" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="_AnonymousScreen5" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Blocks.PBR.Stream Results" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMBlkStrSum.MMBlkStrSum_SummMH" FormKey="Blocks.PBR.Stream Results" Header="PBR (RPlug) - Stream Results" ResultsOnly="True" PathKey="Top.appModelV8.Blocks.PBR">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="id">PBR</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Blocks.PBR</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule IsHierarchy="True" ContextPath="Top.appModelV8.Blocks.PBR">
+                  <apmab:ApwnPlotwizardRule.ProgId>
+                    <s:String>WpfPLSOLID.RibbonPlotWizardMgr</s:String>
+                    <s:String>WpfPLRPLUG.RibbonPlotWizardMgr</s:String>
+                  </apmab:ApwnPlotwizardRule.ProgId>
+                </apmab:ApwnPlotwizardRule>
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Blocks.PBR" />
+                <cxv:CxvParameter Name="id" Value="PBR" />
+                <cxv:CxvParameter Name="main_summMH" Value="@main.@parent.@parent" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+                <cxv:CxvParameter Name="selected_tab" Value="tab0" />
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="_AnonymousScreen2" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Flowsheeting Options.Design Specs.PBRWT.Input" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMDesignSpec.MMDesignSpe_Input" FormKey="Flowsheeting Options.Design Specs.PBRWT.Input" Header="PBRWT - Input" ResultsOnly="False" PathKey="Top.appModelV8.Flowsheeting Options.Design-Spec.PBRWT">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="id">PBRWT</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Flowsheeting Options.Design-Spec.PBRWT</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Flowsheeting Options.Design-Spec.PBRWT" />
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Flowsheeting Options.Design-Spec.PBRWT" />
+                <cxv:CxvParameter Name="id" Value="PBRWT" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+                <cxv:CxvParameter Name="NotNeedType" Value="NotNull" />
+                <cxv:CxvParameter Name="xVarName" Value="BUAC" />
+                <cxv:CxvParameter Name="p_BlockVarVisible" Value="0" />
+                <cxv:CxvParameter Name="xInt" Value="BUAC" />
+                <cxv:CxvParameter Name="Rowsvw_0_IsMixedCase" Value="0" />
+                <cxv:CxvParameter Name="vwrow0" Value="FVN_STREAM" />
+                <cxv:CxvParameter Name="Rowsvw_1_IsMixedCase" Value="0" />
+                <cxv:CxvParameter Name="vwrow1" Value="FVN_SUBS" />
+                <cxv:CxvParameter Name="Rowsvw_2_IsMixedCase" Value="0" />
+                <cxv:CxvParameter Name="vwrow2" Value="FVN_COMPONEN" />
+                <cxv:CxvParameter Name="Rowsvw_3_IsMixedCase" Value="0" />
+                <cxv:CxvParameter Name="vwrow3" Value="FVN_UOM" />
+                <cxv:CxvParameter Name="row0" Value="VARYBLOCK" />
+                <cxv:CxvParameter Name="row1" Value="VARYVARIABLE" />
+                <cxv:CxvParameter Name="row2" Value="VARYSENTENCE" />
+                <cxv:CxvParameter Name="row3" Value="VARYUOM" />
+                <cxv:CxvParameter Name="selected_tab" Value="tab2" />
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="_AnonymousScreen4" ScreenFactoryKey="ApwnFormContentFactory">
+          <WorkspaceScreenData.ScreenSubject>
+            <atapmaa:ApwnFormScreenSubject Key="Flowsheeting Options.Design Specs" NavigationGroupKey="Simulation">
+              <atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+                <atapie:ShowFormEventArgs FormProgId="MMGeneric.MMGeneric_List1D_withCheckBox" FormKey="Flowsheeting Options.Design Specs" Header="Design Specs" ResultsOnly="False" PathKey="Top.appModelV8.Flowsheeting Options.Design-Spec">
+                  <atapie:ShowFormEventArgs.Parameters>
+                    <s:String assembly:Key="id">Design-Spec</s:String>
+                    <s:String assembly:Key="main">Top.appModelV8.Flowsheeting Options.Design-Spec</s:String>
+                  </atapie:ShowFormEventArgs.Parameters>
+                </atapie:ShowFormEventArgs>
+              </atapmaa:ApwnFormScreenSubject.ShowFormArgs>
+              <atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+                <apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Flowsheeting Options.Design-Spec" />
+              </atapmaa:ApwnFormScreenSubject.PlotwizardRule>
+            </atapmaa:ApwnFormScreenSubject>
+          </WorkspaceScreenData.ScreenSubject>
+          <WorkspaceScreenData.ScreenState>
+            <atapmaa:ApwnFormScreenState>
+              <atapmaa:ApwnFormScreenState.Parameters>
+                <cxv:CxvParameter Name="main" Value="Top.appModelV8.Flowsheeting Options.Design-Spec" />
+                <cxv:CxvParameter Name="id" Value="Design-Spec" />
+                <cxv:CxvParameter Name="extraComments_path" Value="Comments" />
+                <cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" />
+                <cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" />
+                <cxv:CxvParameter Name="p_Active.PBRWT">
+                  <cxv:CxvParameter.Value>
+                    <s:Boolean>True</s:Boolean>
+                  </cxv:CxvParameter.Value>
+                </cxv:CxvParameter>
+              </atapmaa:ApwnFormScreenState.Parameters>
+            </atapmaa:ApwnFormScreenState>
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+        <WorkspaceScreenData PaneName="ModelLibraryScreenFactoryKey" ScreenFactoryKey="ModelLibraryScreenFactoryKey">
+          <WorkspaceScreenData.ScreenState>
+            <ScreenState />
+          </WorkspaceScreenData.ScreenState>
+        </WorkspaceScreenData>
+      </ShellWorkspace.Screens>
+    </ShellWorkspace>
+  </CommonShellSettings.CurrentWorkspace>
+  <CommonShellSettings.SavedWorkspaces>
+    <ShellWorkspaceFolder />
+  </CommonShellSettings.SavedWorkspaces>
+</CommonShellSettings>onShellSettings>onShellSettings>
+$_END_APWNSHELL_SETTINGS
+#
+$_GRID_TEMPLATES
+$_START_TEMPLATE_Model
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedSummaryGridTemplateCol>
+  <TabbedSummaryGridTemplates />
+</TabbedSummaryGridTemplateCol>
+$_END_TEMPLATE_Model
+$_END_GRID_TEMPLATES
+PFSVData
+# of PFS Objects = 7
+SIZE -1.0594 3 -1.6 0.6
+BLOCK
+ID: PBR
+Version: 1
+ICON: "ICON1"
+Flag 0
+Section GLOBAL
+At 0.902400 0.003131
+Label At -0.102400 0.596869
+Scale 1.000000 Modifier 0
+BLOCK
+ID: PBRWT
+Version: 1
+ICON: "BLOCK"
+Flag 0
+Section 
+At 2.600000 -1.200000
+Label At -0.000397 0.203996
+Annotation At -0.450000 -0.550000
+Scale 1.000000 Modifier 0
+STREAM
+ID: FEED
+Version: 2
+Flag 0
+GLOBAL 117
+TYPE 0 TERMINAL 1
+At -1.059400 -0.363837
+Label At 0.429700 0.000000
+ROUTE 0 0
+$ $ 0.0 0.0
+ROUTE 1 0
+r r -1.059400 -0.363837 0
+x x -0.200000 -0.363837 1
+y y -0.200000 -0.371869 1
+x x 0.177400 -0.371869 0
+t l 0.377400 -0.371869 0
+$ C 1.000000 0.0
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 1
+$ $ 0.0 0.0
+ROUTE 1 1
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 2
+$ $ 0.0 0.0
+ROUTE 1 2
+$ $ 0.0 0.0
+STREAM
+ID: OUTPUT
+Version: 2
+Flag 0
+GLOBAL 117
+TYPE 0 TERMINAL 2
+At 2.800813 0.401912
+Label At -0.350406 0.000000
+ROUTE 0 0
+r l 2.800813 0.401912 0
+x y 2.100000 0.401912 0
+y x 2.100000 0.378131 0
+x 0 1.627400 0.378131 0
+t r 1.427400 0.378131 0
+$ C 1.000000 0.0
+$ $ 0.0 0.0
+ROUTE 1 0
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 1
+$ $ 0.0 0.0
+ROUTE 1 1
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 2
+$ $ 0.0 0.0
+ROUTE 1 2
+$ $ 0.0 0.0
+STREAM
+ID: PBRWT.OUTPUT
+Version: 2
+DisplayName: "PBRWT"
+Flag 0
+TYPE 0 TERMINAL 0
+At 0.875204 -3.000000
+Label At 0.000000 0.000000
+ROUTE 0 0
+r r 0.875204 -3.000000 0
+x y 2.450407 -3.000000 0
+y y 2.450407 0.272160 0
+t d 2.450407 0.372176 0
+$ D 0.000000 -0.029736
+$ C 0.000000 0.0
+$ $ 0.0 0.0
+ROUTE 1 0
+r r 0.875204 -3.000000 0
+x x -0.700000 -3.000000 0
+y x -0.700000 -1.200000 0
+x x 2.050000 -1.200000 0
+t l 2.150000 -1.200000 0
+$ C 1.000000 0.0
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 1
+$ $ 0.0 0.0
+ROUTE 1 1
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 2
+$ $ 0.0 0.0
+ROUTE 1 2
+$ $ 0.0 0.0
+STREAM
+ID: PBRWT.PBR
+Version: 2
+DisplayName: "PBRWT"
+Flag 0
+TYPE 0 TERMINAL 0
+At 1.712500 0.553131
+Label At 0.000000 0.000000
+ROUTE 0 0
+r r 1.712500 0.553131 0
+x y 3.400000 0.553131 0
+y 0 3.400000 -1.200000 0
+x 0 3.250000 -1.200000 0
+t r 3.050000 -1.200000 0
+$ C 1.000000 0.0
+$ $ 0.0 0.0
+ROUTE 1 0
+r r 1.712500 0.553131 0
+x x 0.025000 0.553131 0
+y x 0.025000 0.003131 0
+x x 0.177400 0.003131 0
+t l 0.377400 0.003131 0
+$ C 1.000000 0.0
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 1
+$ $ 0.0 0.0
+ROUTE 1 1
+$ $ 0.0 0.0
+At 0.000000 0.000000
+Label At 0.000000 0.000000
+ROUTE 0 2
+$ $ 0.0 0.0
+ROUTE 1 2
+$ $ 0.0 0.0
+LEGEND
+Version: 2
+Dim: 4.8 0.8 5.61156 0.636424
+Size: 0.00318372
+Font: 1 0 =
+# of PFS Objects = 0
+VIEWPORT -1.663243 3.621733 0.846550 -1.897817
+LAYOUT
+TableFormat 1
+Location -1.2594 2.8261 3.00081 -2.74797
+PaperSize 21590 27940
+Margins 500 500 500 500
+Pages 1 1 1 1
+PAGESETUP
+PAPERSIZE 
+PAPERSOURCE 
+ORIENTATION -1
+PRINTPAGENO 1 1
+LEFTMARGIN 10mm
+RIGHTMARGIN 10mm
+TOPMARGIN 10mm
+BOTTOMMARGIN 10mm
+VISIBILITY 0.030000
+PFDFLAG 255 255
+PFDMODE 0
+SCALE 0.003184
+
+$_SUMMARY_FILE
+ MMSUMMARY34.0                                                                  
+ IDSET RUNID (PROPERTIES) (114 *5)                                              
+ IDSET IT (PROPERTIES) (117 *6 119 *6 115 *1)                                   
+ LSET RUNID (%RUNID)                                                            
+ LSET IT (%IT)                                                                  
+ IDSET VERS (PROPERTIES) (345 *6 346 *6 347 *6 348 *6 355 *6)                   
+ LSET VERS (%VERS)                                                              
+ DSET RUN-STATUS VERS @VERS ( "34.0" "WINDOWS" "" "kadri" "KADRIANDV1" )        
+ IDSET STRNAM (PROPERTIES) (1233 *6)                                            
+ LSET STRNAM (%STRNAM)                                                          
+ IDSET ID_STRPR (PROPERTIES) ( 454 *2 <119> 1236 *2 <125> 1237 *2 <29> 1238 *2  
+ <55> 1239 *2 <55> 1083 *6 1084 *6 )                                            
+ LSET L_STRPR (%ID_STRPR)                                                       
+ IDSET ID_GUID (PROPERTIES) ( 1270 *6 )                                         
+ LSET L_GUID (%ID_GUID)                                                         
+ DSET RUN-STATUS IT @IT ( "NOVEMBER 13, 2016   2:40:24 P.M." "_1520gxw.inm" 0)  
+ DSET RUN-STATUS CURRENCY @CURRENCY ( "$" )                                     
+ IDSET ID_NCC (COMPONENTS) (AGUA ACACETIC BUT-ACET BUTANOL)                     
+ IDSET ID_NCCNS (COMPONENTS) (AGUA ACACETIC BUT-ACET BUTANOL)                   
+ IDSET ALIAS (COMPONENTS) (1 *6)                                                
+ LSET ALIAS ( %ID_NCC & %ALIAS)                                                 
+ DSET RUN-STATUS RUNID @RUNID ("_1520gxw")                                      
+ DSET RUN-STATUS RUNID @RUNID ("_1520gxw")                                      
+ IDSET STATUS (PROPERTIES) (125 *1 126 *1 127 *1 128 *1 129 *1 130 *1)          
+ LSET STATUS (%STATUS)                                                          
+ IDSET PPSTAT (PROPERTIES) (272 *1)                                             
+ LSET PPSTAT (%PPSTAT)                                                          
+ DSET RUN-STATUS PPSTAT @PPSTAT (2)                                             
+ IDSET IDRXBAL0 (PROPERTIES) ( 73 *2 <11> 74 *2 75 *2 <10> 76 *2 77 *2 <13> 78  
+ *2)                                                                            
+ IDSET ID_RXBAL (PROPERTIES) ( 73 *2 <11> 358 *2 <11> 359 *2 <11> 74 *2 75 *2   
+ <10> 360 *2 <10> 361 *2 <10> 76 *2 362 *2 <10> 363 *2 <10> 364 *2 <10> 365 *2  
+ 366 *2 <11> 367 *2 <11> 368 *2 <11> 369 *2 370 *2 <10> 371 *2 <10> 372 *2 <10> 
+ 373 *2 77 *2 <13> 374 *2 <13> 375 *2 <13> 78 *2 1266 *2 <10> 1267 *2 <10> 1262 
+ *2 <10> 1263 *2 <10> 1264 *2 <10> )                                            
+ IDSET ID_MOLE (PROPERTIES) ( 79 *2 <11> 80 *2)                                 
+ LSET FLWBAL ( %ID_NCCNS & %ID_MOLE %IDRXBAL0)                                  
+ IDSET ID_XY (PROPERTIES) (43 *2 36 *2 39 *2 40 *2)                             
+ IDSET ID_XX (PROPERTIES) (43 *2 37 *2 38 *2 40 *2)                             
+ IDSET ID_XXY (PROPERTIES) (43 *2 37 *2 38 *2 39 *2 41 *2 42 *2)                
+ LSET VLE ( %ID_XY & %ID_NCC)                                                   
+ LSET LLE ( %ID_XX & %ID_NCC)                                                   
+ LSET VLE3 ( %ID_XXY & %ID_NCC)                                                 
+ IDSET ID_KODE (PROPERTIES) (44 *1)                                             
+ IDSET BLKIN (BLKIN) (STREAMID ?)                                               
+ LSET BLKIN (%BLKIN)                                                            
+ IDSET BLKOUT (BLKOUT) (STREAMID ?)                                             
+ LSET BLKOUT (%BLKOUT)                                                          
+ IDSET TYPIN (TYPIN) (STREAMID ?)                                               
+ LSET TYPIN (%TYPIN)                                                            
+ IDSET TYPOUT (TYPOUT) (STREAMID ?)                                             
+ LSET TYPOUT (%TYPOUT)                                                          
+ IDSET PORT_NO (PROPERTIES) (236 *1 237 *1 238 *1)                              
+ IDSET IDS_0 (SUBSTREAM) ($TOTAL)                                               
+ IDSET IDS_1 (SUBSTREAM) (MIXED)                                                
+ IDSET BLKSTAT (PROPERTIES) (120 *1 121 *1)                                     
+ IDSET BLKMSG (PROPERTIES) (122 *6)                                             
+ LSET BLKSTAT (%BLKSTAT)                                                        
+ LSET BLKMSG (%BLKMSG)                                                          
+ IDSET DESC (PROPERTIES) (113 *6)                                               
+ LSET DESC (%DESC)                                                              
+ IDSET IDPH_V (PHASE) (VAPOR)                                                   
+ IDSET IDPH_L (PHASE) (LIQUID)                                                  
+ IDSET IDPH_S (PHASE) (SOLID)                                                   
+ IDSET IDPH_L1 (PHASE) (LIQUID_1)                                               
+ IDSET IDPH_T (PHASE) (TOTAL)                                                   
+ IDSET IDPH_L2 (PHASE) (LIQUID_2)                                               
+ IDSET IDWET (BASIS) (WET)                                                      
+ IDSET IDDRY (BASIS) (DRY)                                                      
+ IDSET SP (PROPERTIES) (118 *6)                                                 
+ LSET SP (%SP)                                                                  
+ IDSET SPSTAT (SPSTAT) (116 *1)                                                 
+ LSET SPSTAT ( %SPSTAT)                                                         
+ IDSET IDERR (PROPERTIES) (131 *1)                                              
+ DSET RUN-STATUS SP @SP ( "NOVEMBER 13, 2016 2:40:24 P.M." )                    
+ IDSET FOR (PROPERTIES) (737 *1)                                                
+ LSET FOR (%FOR)                                                                
+ IDSET FORSTAT (PROPERTIES) (738 *1)                                            
+ LSET FORSTAT (%FORSTAT)                                                        
+ IDSET MW (PROPERTIES) (269 *2)                                                 
+ LSET MW (%MW & %ID_NCCNS)                                                      
+ DSET MW MW @MW (1.80152800D+01 6.00525600D+01 1.16160080D+02 7.41228000D+01)   
+ IDSET VST (PROPERTIES) (270 *2 <43> )                                          
+ LSET VST (%VST & %ID_NCC)                                                      
+ DSET VST VST @VST (1.80500000D-02 <1> 5.76300000D-02 <1> 1.32612000D-01 <1>    
+ 9.13015000D-02 <1> )                                                           
+ IDSET TB (PROPERTIES) (271 *2 <22> )                                           
+ LSET TB (%TB & %ID_NCC)                                                        
+ DSET TB TB @TB (1.00000000D+02 <4> 1.17900000D+02 <4> 1.26110000D+02 <4>       
+ 1.18750000D+02 <4> )                                                           
+ IDSET CASN (PROPERTIES) (37100 *6)                                             
+ LSET CASN (%ID_NCC & %CASN)                                                    
+ DSET CASN CASN @CASN ( "7732-18-5" "64-19-7" "123-86-4" "71-36-3" )            
+ IDSET PAMB (PROPERTIES) (32 *2)                                                
+ LSET PAMB (%PAMB)                                                              
+ DSET PAMB PAMB @PAMB (1.01325000D+05)                                          
+ IDSET PAMB2 (PROPERTIES) (32 *2 <20> )                                         
+ LSET PAMB2 (%PAMB2)                                                            
+ DSET RUN-STATUS PAMB @PAMB2 (1.01325000D+00 <5> )                              
+ IDSET ISODES (PROPERTIES) (123 *5 124 *5 132 *5)                               
+ IDSET ISTRCV (PROPERTIES) (1251 *2)                                            
+ IDSET ID_WORK (PROPERTIES) (112 *2 <19> 195 *2 <28> )                          
+ LSET L_WORK (%ISODES %ID_WORK)                                                 
+ IDSET ID_HEAT (PROPERTIES) (1 *2 <13> 815 *2 <22> 816 *2 <22> )                
+ LSET L_HEAT (%ISODES %ID_HEAT)                                                 
+ IDSET ID_LTVC (PROPERTIES) (817 *2 <22> )                                      
+ IDSET ID_LQVC (PROPERTIES) (818 *2 <13> )                                      
+ IDSET ID_TPQV (PROPERTIES) (1 *2 <13> 31 *2 <22> 32 *2 <20> 2 *2 3 *2)         
+ IDSET ID_QTP (PROPERTIES) (1 *2 <13> 31 *2 <22> 32 *2 <20> 3 *2)               
+ IDSET TOTAL (PROPERTIES) (524 *2 <10> 525 *2 <10> 526 *2 <10> )                
+ IDSET ENERGY (PROPERTIES) (504 *2 <13> 505 *2 <13> 506 *2 <13> 1 *2 <13> )     
+ IDSET TOTAX (PROPERTIES) (524 *2 <18> 525 *2 <18> 526 *2 <18> )                
+ IDSET ENERGX (PROPERTIES) (504 *2 <5> 505 *2 <5> 506 *2 <5> 1 *2 <5> )         
+ LSET BPSBAL3 ( %TOTAL %ENERGY)                                                 
+ LSET BPBATCH ( %TOTAX %ENERGX)                                                 
+ IDSET ID_1 (NPOINT) (#1)                                                       
+ IDSET ID_2 (PROPERTIES) (259 *5 241 *2 255 *2 256 *2 260 *2 126 *6 258         
+ *5)                                                                            
+ LSET L_1 (%ID_2 & %ID_1)                                                       
+ DSET CONV-SUM SPEC-SUMMARY CNV_SPEC @L_1 ("PBRWT" -2.95386364D-06              
+ 1.00000000D-03 -2.95386364D-03 2.22626906D+02 "#" "$OLVER08" )                 
+ DSET CONV-SUM SPEC-SUMMARY COMPSTAT @L_1 (0)                                   
+ DSET DESIGN-SPEC PBRWT BLKSTAT @BLKSTAT (0 0)                                  
+ DSET DESIGN-SPEC PBRWT COMPSTAT @L_1 (0)                                       
+ IDSET ID_3 (NPOINT) (#2)                                                       
+ IDSET ID_4 (PROPERTIES) (257 *6 106 *2 107 *2 262 *6)                          
+ LSET L_2 ( %ID_4 & %ID_3)                                                      
+ DSET DESIGN-SPEC PBRWT DEFV_SUM @L_2 ("MANIPULATED" 1.00000000D+02             
+ 2.22626906D+02 "KG" "BUAC" 7.02626234D+01 9.99999970D+01 "KMOL/HR" )           
+ DSET RUN-STATUS FORSTAT @FORSTAT (2)                                           
+ IDSET ID_5 (PROPERTIES) (131 *6 265 *1 266 *1 )                                
+ LSET L_3 (%ID_5)                                                               
+ DSET CONVERGENCE SECANT $OLVER08 OPT_STAT @L_3 ("OK" 7 * )                     
+ IDSET ID_6 (NPOINT) (#1)                                                       
+ IDSET ID_7 (PROPERTIES) (257 *6 262 *6 260 *2 261 *2 256 *2 126 *6 850 *1 860  
+ *6 )                                                                           
+ LSET L_4 (%ID_7 & %ID_6)                                                       
+ DSET CONVERGENCE SECANT $OLVER08 DSGN_PLT @L_4 ("BLOCK-VAR" "KG"               
+ 2.22626906D+02 2.22604827D+02 -2.95386364D-03 "" 1 "PBR.PARAM.CATWT" )         
+ DSET CONVERGENCE SECANT $OLVER08 COMPSTAT @L_1 (0)                             
+ DSET CONVERGENCE SECANT $OLVER08 BLKSTAT @BLKSTAT (0 0)                        
+ IDSET ID_8 (SPECNAME) ("PBRWT" )                                               
+ IDSET ID_9 (NPOINT) (#7)                                                       
+ IDSET ID_10 (PROPERTIES) (222 *1 260 *2 241 *2 256 *2 )                        
+ LSET L_5 ((%ID_10 & %ID_9) & %ID_8)                                            
+ DSET CONVERGENCE SECANT $OLVER08 CONV_HIS_DS @L_5 (1 1.00000000D+02            
+ -2.97373766D+01 -2.97373766D+04 2 1.09000000D+02 -2.62505920D+01               
+ -2.62505920D+04 3 1.76757364D+02 -7.75009281D+00 -7.75009281D+03 4             
+ 2.03812852D+02 -2.86901326D+00 -2.86901326D+03 5 2.25403243D+02 3.90687069D-01 
+ 3.90687069D+02 6 2.22604827D+02 -3.14063755D-03 -3.14063755D+00 7              
+ 2.22626906D+02 -2.95386364D-06 -2.95386364D-03 )                               
+ IDSET ID_11 (NPOINT) (#7)                                                      
+ IDSET ID_12 (NCOL) (#1)                                                        
+ IDSET ID_13 (PROPERTIES) (106 *6 107 *6 108 *6 109 *6 110 *6 111 *6 )          
+ IDSET ID_14 (PROPERTIES) (260 *2)                                              
+ IDSET ID_15 (PROPERTIES) (131 *1 )                                             
+ LSET L_6 ((%ID_15 & %ID_11) (%ID_13 & %ID_12) (%ID_14 & %ID_12 & %ID_11) )     
+ DSET CONVERGENCE SECANT $OLVER08 IHMXET @L_6 ( 1 1 1 1 1 1 1 "MAXIMUM"         
+ "ERR/TOL" * * * * -2.97373766D+04 -2.62505920D+04 -7.75009281D+03              
+ -2.86901326D+03 3.90687069D+02 -3.14063755D+00 -2.95386364D-03 )               
+ DSET FLWBAL @FLWBAL (-9.99999970D+01 <3> 9.99999970D+01 <3> -9.99999970D+01 <3>
+ 9.99999970D+01 <3> -1.00000000D+00 4.99999985D-01 -1.00000000D+00              
+ 4.99999985D-01 -1.43813850D-11 <3> -1.42108547D-16 -1.22963684D-09 <3>         
+ -4.58220062D-14 0.D0 <18> 0.D0)                                                
+ DSET ALIAS @ALIAS ( "H2O" "C2H4O2-1" "C6H12O2-1" "C4H10O-1" )                  
+ IDSET ID_16 (NPOINT) (#4)                                                      
+ IDSET ID_17 (PROPERTIES) (339 *6 132 *5 1196 *6 1197 *6 1198 *6)               
+ LSET L_7 (%ID_17 & %ID_16)                                                     
+ DSET COMPONENTS MAIN COMPS @L_7 ("AGUA" C "H2O" "H2O" "AGUA" "ACACETIC" C      
+ "C2H4O2-1" "C2H4O2-1" "ACACETIC" "BUT-ACET" C "C6H12O2-1" "C6H12O2-1"          
+ "BUT-ACET" "BUTANOL" C "C4H10O-1" "C4H10O-1" "BUTANOL" )                       
+ IDSET ID_18 (RXNNO) ( 1 )                                                      
+ IDSET ID_19 (PROPERTIES) ( 1212 *2 1213 *2 1214 *2 <39> 1215 *2 <22> )         
+ LSET L_8 ( %ID_19 & %ID_18)                                                    
+ DSET REACTIONS LHHW PFR KIN_RES @L_8 ( 4.31674575D+08 0.D0 1.74109105D+01 <4>  
+ * <4> )                                                                        
+ IDSET ID_20 (PROPERTIES) (1 *2 <13> 33 *2 <22> 34 *2 <22> 148 *2 <24> 183 *2   
+ <20> 170 *2 <20> 169 *2 <22> 171 *2 )                                          
+ LSET L_9 (%ID_RXBAL %ID_20)                                                    
+ DSET BLOCK RPLUG PBR BLKSTAT @BLKSTAT (0 0)                                    
+ DSET BLOCK RPLUG PBR COMPSTAT @L1 (0)                                          
+ DSET BLOCK RPLUG PBR SYNCSTAT @L1 (0)                                          
+ DSET BLOCK RPLUG PBR BLKIN @BLKIN (1 FEED                                      
+ "e2a1f9cf-ad3b-4736-a01a-110fd986ed26" "fb7cd8ea-7df1-4f85-83c8-7af7892d0927"  
+ )                                                                              
+ DSET BLOCK RPLUG PBR TYPIN @TYPIN (1 MATERIAL)                                 
+ DSET BLOCK RPLUG PBR BLKOUT @BLKOUT (1 OUTPUT                                  
+ "e2a1f9cf-ad3b-4736-a01a-110fd986ed26" "f87c071c-4ff5-4950-b7b5-c73bb8789b6a"  
+ )                                                                              
+ DSET BLOCK RPLUG PBR TYPOUT @TYPOUT (1 MATERIAL)                               
+ DSET BLOCK RPLUG PBR RES_Q @L_9 (4.00000000D+02 <3> 4.00000000D+02 <3>         
+ 1.43385304D-11 <3> -1.42108547D-16 2.68350720D+04 <3> 2.68350720D+04 <3> * <3> 
+ -4.58220062D-14 * <3> * <3> * <3> * 4.00000000D+02 <3> 4.00000000D+02 <3>      
+ 1.43385304D-11 <3> -1.42108547D-16 2.68350720D+04 <3> 2.68350720D+04 <3> * <3> 
+ -4.58220062D-14 -3.73627030D+01 <18> -3.73627030D+01 <18> * <18> 0.D0 0.D0 <3> 
+ 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <18> 1.10000000D+02 <4>               
+ 1.15837930D+02 <4> 6.02600210D-02 <2> 1.80000000D+00 <5> 0.D0 <5> * <4> *)     
+ IDSET ID_21 (PROPERTIES) (222 *1 464 *5 72 *2 <17> )                           
+ LSET L_10 (%ID_21)                                                             
+ DSET BLOCK RPLUG PBR PLUG_PRM @L_10 (100 YES 3.00000000D+00 <1> )              
+ IDSET ID_22 (PROPERTIES) (200 *2 <17> )                                        
+ LSET L_11 (%ID_22)                                                             
+ DSET BLOCK RPLUG PBR PLUG_DIA @L_11 (1.00000000D-01 <1> )                      
+ IDSET ID_23 ( NPOINTS) ( #11 )                                                 
+ IDSET ID_24 ( NCOMPS) ( #4 )                                                   
+ IDSET ID_25 ( PROPERTIES) ( 303 *2 <89> )                                      
+ IDSET ID_26 ( PROPERTIES) ( 304 *2 <89> )                                      
+ IDSET ID_27 ( PROPERTIES) ( 330 *2 <1> )                                       
+ IDSET ID_28 ( SUBSTREAM) ( #1 )                                                
+ IDSET ID_29 ( REACTIONS) ( #1 )                                                
+ LSET L_12 ( ( %ID_26 & %ID_24 & %ID_28 & %ID_23) ( %ID_25 & %ID_29 &           
+ %ID_23) ( %ID_27 & %ID_29 & %ID_23) )                                          
+ DSET BLOCK RPLUG PBR R1_DPLS @L_12 ( 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0  
+ <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3>    
+ 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0   
+ <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3>    
+ 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0   
+ <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 7.39961309D+01 <3>            
+ 6.64510109D+01 <3> 5.46741278D+01 <3> 4.31453672D+01 <3> 3.38302144D+01 <3>    
+ 2.68114270D+01 <3> 2.15946132D+01 <3> 1.76804021D+01 <3> 1.46932592D+01 <3>    
+ 1.23724963D+01 <3> 1.05377424D+01 <3> 6.63343275D-01 <1> 6.63343275D-01 <1>    
+ 6.63343275D-01 <1> 6.63343275D-01 <1> 6.63343275D-01 <1> 6.63343275D-01 <1>    
+ 6.63343275D-01 <1> 6.63343275D-01 <1> 6.63343275D-01 <1> 6.63343275D-01 <1>    
+ 6.63343275D-01 <1> )                                                           
+ IDSET ID_30 (PROPERTIES) (88 *2 <39> 61 *2 <39> 89 *2 <39> 90 *2 <39> 991 *2   
+ <7> 992 *2 <7> 993 *2 <7> 994 *2 <7> 926 *2 <37> 925 *2 <37> 995 *2 <37> 996   
+ *2 <37> 928 *2 927 *2 997 *2 998 *2 2 *2 3 *2 31 *2 <22> )                     
+ IDSET ID_31 (PROPERTIES) (39 *2 36 *2 37 *2 38 *2 )                            
+ IDSET ID_32 (NPOINT) ( #11)                                                    
+ IDSET ID_33 (PROPERTIES) (2042 *2 <40> 2041 *2 <38> 2043 *2 2044 *2 2045 *2 )  
+ IDSET ID_34 (PROPERTIES) (2040 *2 )                                            
+ LSET L_13 ( ( %ID_30 %ID_33 %ID_NCCNS & ( %ID_31 %ID_34 ) ) & %ID_32)          
+ DSET BLOCK RPLUG PBR R3_DPLS @L_13 ( * <4> -9.34067576D+01 <4> -9.34067576D+01 
+ <4> * <4> * <3> -9.27562554D+01 <3> -9.27562554D+01 <3> * <3> * <3>            
+ 1.22462732D-02 <3> 1.22462732D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 *  
+ 0.D0 1.00000000D+00 1.09999995D+02 <4> -1.39230866D+03 <4> 8.21574059D+02 <1>  
+ 6.70876800D+01 0.D0 1.00000000D+00 0.D0 6.29796494D-01 0.D0 3.70203506D-01     
+ 0.D0 5.00000000D-01 0.D0 5.00000000D-01 0.D0 5.00000000D-01 0.D0               
+ 5.00000000D-01 0.D0 5.00000000D-01 0.D0 5.00000000D-01 0.D0 5.00000000D-01     
+ 0.D0 5.00000000D-01 * <4> -9.34067590D+01 <4> -9.34067590D+01 <4> * <4> * <3>  
+ -9.18752796D+01 <3> -9.18752796D+01 <3> * <3> * <3> 1.21986370D-02 <3>         
+ 1.21986370D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.11395771D+02 <4> -1.39230868D+03 <4> 8.18378258D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 1.68586319D-01 4.43212107D-01 5.39211229D-02 3.34280451D-01     
+ 5.30684749D-02 4.46931525D-01 5.30684749D-02 4.46931525D-01 5.30684749D-02     
+ 4.46931525D-01 5.30684749D-02 4.46931525D-01 5.30684749D-02 4.46931525D-01     
+ 5.30684749D-02 4.46931525D-01 5.30684749D-02 4.46931525D-01 5.30684749D-02     
+ 4.46931525D-01 * <4> -9.34067604D+01 <4> -9.34067604D+01 <4> * <4> * <3>       
+ -9.13830774D+01 <3> -9.13830774D+01 <3> * <3> * <3> 1.21605402D-02 <3>         
+ 1.21605402D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.12533531D+02 <4> -1.39230870D+03 <4> 8.15822430D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 3.03780039D-01 3.11492454D-01 9.45181486D-02 2.90209358D-01     
+ 9.86286471D-02 4.01371353D-01 9.86286471D-02 4.01371353D-01 9.86286471D-02     
+ 4.01371353D-01 9.86286471D-02 4.01371353D-01 9.86286471D-02 4.01371353D-01     
+ 9.86286471D-02 4.01371353D-01 9.86286471D-02 4.01371353D-01 9.86286471D-02     
+ 4.01371353D-01 * <4> -9.34067603D+01 <4> -9.34067603D+01 <4> * <4> * <3>       
+ -9.10681359D+01 <3> -9.10681359D+01 <3> * <3> * <3> 1.21319117D-02 <3>         
+ 1.21319117D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.13403018D+02 <4> -1.39230870D+03 <4> 8.13901812D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 3.98412102D-01 2.29410420D-01 1.20931336D-01 2.51246142D-01     
+ 1.35212952D-01 3.64787048D-01 1.35212952D-01 3.64787048D-01 1.35212952D-01     
+ 3.64787048D-01 1.35212952D-01 3.64787048D-01 1.35212952D-01 3.64787048D-01     
+ 1.35212952D-01 3.64787048D-01 1.35212952D-01 3.64787048D-01 1.35212952D-01     
+ 3.64787048D-01 * <4> -9.34067595D+01 <4> -9.34067595D+01 <4> * <4> * <3>       
+ -9.08600924D+01 <3> -9.08600924D+01 <3> * <3> * <3> 1.21107185D-02 <3>         
+ 1.21107185D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.14055784D+02 <4> -1.39230869D+03 <4> 8.12480009D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 4.62829598D-01 1.78806312D-01 1.37573798D-01 2.20790291D-01     
+ 1.63926854D-01 3.36073146D-01 1.63926854D-01 3.36073146D-01 1.63926854D-01     
+ 3.36073146D-01 1.63926854D-01 3.36073146D-01 1.63926854D-01 3.36073146D-01     
+ 1.63926854D-01 3.36073146D-01 1.63926854D-01 3.36073146D-01 1.63926854D-01     
+ 3.36073146D-01 * <4> -9.34067588D+01 <4> -9.34067588D+01 <4> * <4> * <3>       
+ -9.07178559D+01 <3> -9.07178559D+01 <3> * <3> * <3> 1.20948570D-02 <3>         
+ 1.20948570D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.14549980D+02 <4> -1.39230867D+03 <4> 8.11415897D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 5.07654832D-01 1.46373350D-01 1.48299385D-01 1.97672434D-01     
+ 1.86524163D-01 3.13475837D-01 1.86524163D-01 3.13475837D-01 1.86524163D-01     
+ 3.13475837D-01 1.86524163D-01 3.13475837D-01 1.86524163D-01 3.13475837D-01     
+ 1.86524163D-01 3.13475837D-01 1.86524163D-01 3.13475837D-01 1.86524163D-01     
+ 3.13475837D-01 * <4> -9.34067582D+01 <4> -9.34067582D+01 <4> * <4> * <3>       
+ -9.06170718D+01 <3> -9.06170718D+01 <3> * <3> * <3> 1.20827268D-02 <3>         
+ 1.20827268D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.14931498D+02 <4> -1.39230867D+03 <4> 8.10602111D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 5.40015915D-01 1.24494711D-01 1.55494410D-01 1.79994964D-01     
+ 2.04562882D-01 2.95437118D-01 2.04562882D-01 2.95437118D-01 2.04562882D-01     
+ 2.95437118D-01 2.04562882D-01 2.95437118D-01 2.04562882D-01 2.95437118D-01     
+ 2.04562882D-01 2.95437118D-01 2.04562882D-01 2.95437118D-01 2.04562882D-01     
+ 2.95437118D-01 * <4> -9.34067578D+01 <4> -9.34067578D+01 <4> * <4> * <3>       
+ -9.05432673D+01 <3> -9.05432673D+01 <3> * <3> * <3> 1.20732299D-02 <3>         
+ 1.20732299D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.15232534D+02 <4> -1.39230866D+03 <4> 8.09964987D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 5.64249155D-01 1.09008698D-01 1.60522829D-01 1.66219319D-01     
+ 2.19214443D-01 2.80785557D-01 2.19214443D-01 2.80785557D-01 2.19214443D-01     
+ 2.80785557D-01 2.19214443D-01 2.80785557D-01 2.19214443D-01 2.80785557D-01     
+ 2.19214443D-01 2.80785557D-01 2.19214443D-01 2.80785557D-01 2.19214443D-01     
+ 2.80785557D-01 * <4> -9.34067576D+01 <4> -9.34067576D+01 <4> * <4> * <3>       
+ -9.04876793D+01 <3> -9.04876793D+01 <3> * <3> * <3> 1.20656350D-02 <3>         
+ 1.20656350D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.15474864D+02 <4> -1.39230866D+03 <4> 8.09455460D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 5.82975105D-01 9.75939869D-02 1.64166141D-01 1.55264766D-01     
+ 2.31309655D-01 2.68690345D-01 2.31309655D-01 2.68690345D-01 2.31309655D-01     
+ 2.68690345D-01 2.31309655D-01 2.68690345D-01 2.31309655D-01 2.68690345D-01     
+ 2.31309655D-01 2.68690345D-01 2.31309655D-01 2.68690345D-01 2.31309655D-01     
+ 2.68690345D-01 * <4> -9.34067575D+01 <4> -9.34067575D+01 <4> * <4> * <3>       
+ -9.04448393D+01 <3> -9.04448393D+01 <3> * <3> * <3> 1.20594528D-02 <3>         
+ 1.20594528D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.15673217D+02 <4> -1.39230865D+03 <4> 8.09040713D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 5.97816292D-01 8.89016787D-02 1.66885997D-01 1.46396032D-01     
+ 2.41430652D-01 2.58569348D-01 2.41430652D-01 2.58569348D-01 2.41430652D-01     
+ 2.58569348D-01 2.41430652D-01 2.58569348D-01 2.41430652D-01 2.58569348D-01     
+ 2.41430652D-01 2.58569348D-01 2.41430652D-01 2.58569348D-01 2.41430652D-01     
+ 2.58569348D-01 * <4> -9.34067574D+01 <4> -9.34067574D+01 <4> * <4> * <3>       
+ -9.04111731D+01 <3> -9.04111731D+01 <3> * <3> * <3> 1.20543435D-02 <3>         
+ 1.20543435D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 1.15837930D+02 <4> -1.39230865D+03 <4> 8.08697942D+02 <1> 6.70876800D+01 0.D0  
+ 1.00000000D+00 6.09830260D-01 8.20986205D-02 1.68969395D-01 1.39101725D-01     
+ 2.49999993D-01 2.50000007D-01 2.49999993D-01 2.50000007D-01 2.49999993D-01     
+ 2.50000007D-01 2.49999993D-01 2.50000007D-01 2.49999993D-01 2.50000007D-01     
+ 2.49999993D-01 2.50000007D-01 2.49999993D-01 2.50000007D-01 2.49999993D-01     
+ 2.50000007D-01 )                                                               
+ IDSET ID_35 (NPOINT) (#11)                                                     
+ IDSET ID_36 (PROPERTIES) (72 *2 <17> )                                         
+ LSET L_14 (%ID_36 & %ID_35 & %IDS_1)                                           
+ DSET BLOCK RPLUG PBR PLPR_1 @L_14 (0.D0 <1> 3.00000000D-01 <1> 6.00000000D-01  
+ <1> 9.00000000D-01 <1> 1.20000000D+00 <1> 1.50000000D+00 <1> 1.80000000D+00 <1>
+ 2.10000000D+00 <1> 2.40000000D+00 <1> 2.70000000D+00 <1> 3.00000000D+00 <1> )  
+ IDSET ID_37 (PROPERTIES) (32 *2 <20> )                                         
+ LSET L_15 (%ID_37 & %ID_35 & %IDS_1)                                           
+ DSET BLOCK RPLUG PBR PLPR_1 @L_15 (1.80000000D+00 <5> 1.80000000D+00 <5>       
+ 1.80000000D+00 <5> 1.80000000D+00 <5> 1.80000000D+00 <5> 1.80000000D+00 <5>    
+ 1.80000000D+00 <5> 1.80000000D+00 <5> 1.80000000D+00 <5> 1.80000000D+00 <5>    
+ 1.80000000D+00 <5> )                                                           
+ IDSET ID_38 (PROPERTIES) (1 *2 <13> )                                          
+ LSET L_16 (%ID_38 & %ID_35 & %IDS_1)                                           
+ DSET BLOCK RPLUG PBR PLPR_1 @L_16 (0.D0 <18> 0.D0 <18> 0.D0 <18> 0.D0 <18>     
+ 0.D0 <18> 0.D0 <18> 0.D0 <18> 0.D0 <18> 0.D0 <18> 0.D0 <18> 0.D0 <18>          
+ )                                                                              
+ IDSET ID_39 (PROPERTIES) (31 *2 <22> )                                         
+ LSET L_17 (%ID_39 & %ID_35 & %IDS_1)                                           
+ DSET BLOCK RPLUG PBR PLPR_1 @L_17 (1.10000000D+02 <4> 1.11395805D+02 <4>       
+ 1.12533598D+02 <4> 1.13403082D+02 <4> 1.14055833D+02 <4> 1.14550011D+02 <4>    
+ 1.14931516D+02 <4> 1.15232544D+02 <4> 1.15474868D+02 <4> 1.15673218D+02 <4>    
+ 1.15837930D+02 <4> )                                                           
+ IDSET ID_40 (PROPERTIES) (2 *2)                                                
+ LSET L_18 (%ID_40 & %ID_35 & %IDS_1)                                           
+ DSET BLOCK RPLUG PBR PLPR_1 @L_18 (0.D0 0.D0 0.D0 0.D0 0.D0 0.D0 0.D0 0.D0     
+ 0.D0 0.D0 0.D0 )                                                               
+ IDSET ID_41 (PROPERTIES) (138 *2 <24> )                                        
+ LSET L_19 (%ID_41 & %ID_35 & %IDS_1)                                           
+ DSET BLOCK RPLUG PBR PLPR_1 @L_19 (0.D0 <2> 6.08036711D-03 <2> 1.21393900D-02  
+ <2> 1.81818675D-02 <2> 2.42120392D-02 <2> 3.02330408D-02 <2> 3.62471425D-02 <2>
+ 4.22559237D-02 <2> 4.82604951D-02 <2> 5.42616586D-02 <2> 6.02600210D-02 <2>    
+ )                                                                              
+ IDSET ID_42 (PROPERTIES) (67 *2)                                               
+ IDSET ID_43 (PROPERTIES) (101 *2)                                              
+ LSET L_20 (%ID_36 & %ID_35 & %IDS_1 )                                          
+ DSET BLOCK RPLUG PBR PZL_1 @L_20 (0.D0 <1> 3.00000000D-01 <1> 6.00000000D-01   
+ <1> 9.00000000D-01 <1> 1.20000000D+00 <1> 1.50000000D+00 <1> 1.80000000D+00 <1>
+ 2.10000000D+00 <1> 2.40000000D+00 <1> 2.70000000D+00 <1> 3.00000000D+00 <1> )  
+ DSET BLOCK RPLUG PBR PMSL_1 @L_20 (0.D0 <1> 3.00000000D-01 <1> 6.00000000D-01  
+ <1> 9.00000000D-01 <1> 1.20000000D+00 <1> 1.50000000D+00 <1> 1.80000000D+00 <1>
+ 2.10000000D+00 <1> 2.40000000D+00 <1> 2.70000000D+00 <1> 3.00000000D+00 <1> )  
+ IDSET ID_44 (COMPONENTS) (AGUA)                                                
+ LSET L_21 ( %ID_42 & %ID_44 & %ID_35 & %IDS_1 )                                
+ DSET BLOCK RPLUG PBR PLZ_1 @L_21 (0.D0 5.30684749D-02 9.86286471D-02           
+ 1.35212952D-01 1.63926854D-01 1.86524163D-01 2.04562882D-01 2.19214443D-01     
+ 2.31309655D-01 2.41430652D-01 2.49999993D-01 )                                 
+ LSET L_22 ( %ID_43 & %ID_44 & %ID_35 & %IDS_1 )                                
+ DSET BLOCK RPLUG PBR PMSF_1 @L_22 (0.D0 1.42506558D-02 2.64850818D-02          
+ 3.63091880D-02 4.40198285D-02 5.00879598D-02 5.49319576D-02 5.88663904D-02     
+ 6.21143584D-02 6.48321838D-02 6.71333376D-02 )                                 
+ IDSET ID_45 (COMPONENTS) (ACACETIC)                                            
+ LSET L_23 ( %ID_42 & %ID_45 & %ID_35 & %IDS_1 )                                
+ DSET BLOCK RPLUG PBR PLZ_1 @L_23 (5.00000000D-01 4.46931525D-01 4.01371353D-01 
+ 3.64787048D-01 3.36073146D-01 3.13475837D-01 2.95437118D-01 2.80785557D-01     
+ 2.68690345D-01 2.58569348D-01 2.50000007D-01 )                                 
+ LSET L_24 ( %ID_43 & %ID_45 & %ID_35 & %IDS_1 )                                
+ DSET BLOCK RPLUG PBR PMSF_1 @L_24 (4.47567720D-01 4.00064248D-01               
+ 3.59281723D-01 3.26533815D-01 3.00830984D-01 2.80603332D-01 2.64456235D-01     
+ 2.51341104D-01 2.40514250D-01 2.31454587D-01 2.23783867D-01 )                  
+ IDSET ID_46 (COMPONENTS) (BUT-ACET)                                            
+ LSET L_25 ( %ID_42 & %ID_46 & %ID_35 & %IDS_1 )                                
+ DSET BLOCK RPLUG PBR PLZ_1 @L_25 (0.D0 5.30684749D-02 9.86286471D-02           
+ 1.35212952D-01 1.63926854D-01 1.86524163D-01 2.04562882D-01 2.19214443D-01     
+ 2.31309655D-01 2.41430652D-01 2.49999993D-01 )                                 
+ LSET L_26 ( %ID_43 & %ID_46 & %ID_35 & %IDS_1 )                                
+ DSET BLOCK RPLUG PBR PMSF_1 @L_26 (0.D0 9.18862940D-02 1.70772212D-01          
+ 2.34116716D-01 2.83833879D-01 3.22960366D-01 3.54193806D-01 3.79562495D-01     
+ 4.00504952D-01 4.18029121D-01 4.32866648D-01 )                                 
+ IDSET ID_47 (COMPONENTS) (BUTANOL)                                             
+ LSET L_27 ( %ID_42 & %ID_47 & %ID_35 & %IDS_1 )                                
+ DSET BLOCK RPLUG PBR PLZ_1 @L_27 (5.00000000D-01 4.46931525D-01 4.01371353D-01 
+ 3.64787048D-01 3.36073146D-01 3.13475837D-01 2.95437118D-01 2.80785557D-01     
+ 2.68690345D-01 2.58569348D-01 2.50000007D-01 )                                 
+ LSET L_28 ( %ID_43 & %ID_47 & %ID_35 & %IDS_1 )                                
+ DSET BLOCK RPLUG PBR PMSF_1 @L_28 (5.52432280D-01 4.93798803D-01               
+ 4.43460983D-01 4.03040281D-01 3.71315309D-01 3.46348343D-01 3.26418001D-01     
+ 3.10230011D-01 2.96866440D-01 2.85684108D-01 2.76216148D-01 )                  
+ IDSET ID_48 (PROPERTIES) (894 *2 )                                             
+ LSET L_29 (%ID_48 & %ID_35)                                                    
+ DSET BLOCK RPLUG PBR HLDPRF @L_29 (1.00000000D+00 1.00000000D+00               
+ 1.00000000D+00 1.00000000D+00 1.00000000D+00 1.00000000D+00 1.00000000D+00     
+ 1.00000000D+00 1.00000000D+00 1.00000000D+00 1.00000000D+00 )                  
+ IDSET ID_49 (PROPERTIES) (7001 *2 <22> 7002 *2 <20> 8103 *2 <10> 204 *2 <12>   
+ 8101 *2 <11> 7003 *2 )                                                         
+ LSET L_30 ( %ID_49 )                                                           
+ IDSET ID_50 (PROPERTIES) (253 *2)                                              
+ IDSET ID_51 (PROPERTIES) (253 *2 <11> )                                        
+ IDSET ID_52 (PROPERTIES) (253 *2 <12> )                                        
+ IDSET ID_53 (PROPERTIES) (253 *2 <17> )                                        
+ IDSET ID_54 (PROPERTIES) (253 *2 <27> )                                        
+ IDSET ID_55 (PROPERTIES) (253 *2 <59> )                                        
+ IDSET ID_56 (PROPERTIES) (253 *2 <10> )                                        
+ IDSET ID_57 (PROPERTIES) (8101 *2 <11> )                                       
+ IDSET ID_58 (PROPERTIES) (8001 *2 <11> 8003 *2 <10> 8010 *2 <12> 7001 *2 <22>  
+ 7002 *2 <20> 7003 *2 7004 *2 7006 *2 2002 *2 <39> 41142 *2 <40> 41143 *2 <13>  
+ 2003 *2 <41> 41144 *2 <42> 11006 *2 <37> 41145 *2 <38> 11007 *2 8005 *2 <12> ) 
+ LSET L_31 ( %ISODES (( %ID_NCCNS & %ID_57 %ID_58) & %IDS_1) )                  
+ DSET STREAM MATERIAL FEED BLKSTAT @BLKSTAT (0 0)                               
+ DSET STREAM MATERIAL FEED COMPSTAT @L1 (0)                                     
+ DSET STREAM MATERIAL FEED STR_MAIN @L_31 (* PBR LIQUID 0.D0 <3> 2.00000000D+02 
+ <3> 0.D0 <3> 2.00000000D+02 <3> 4.00000000D+02 <3> 2.68350720D+04 <3>          
+ 3.26629984D+01 <7> 1.10000000D+02 <4> 1.80000000D+00 <5> 0.D0 1.00000000D+00   
+ 0.D0 -9.34067574D+01 <4> -1.39230865D+03 <4> -3.73627030D+01 <18>              
+ -9.27562548D+01 <3> -1.38261235D+00 <3> 1.22462731D-02 <3> 8.21574053D+02 <1>  
+ 6.70876800D+01 2.97863000D+01 <7> )                                            
+ DSET STREAM MATERIAL FEED RES_STR @L_30 (1.10000000D+02 <4> 1.80000000D+00 <5> 
+ 2.68350720D+04 <3> 3.26629984D+01 <7> 4.00000000D+02 <3> 0.D0 )                
+ DSET STREAM MATERIAL OUTPUT BLKSTAT @BLKSTAT (0 0)                             
+ DSET STREAM MATERIAL OUTPUT COMPSTAT @L1 (0)                                   
+ DSET STREAM MATERIAL OUTPUT STR_MAIN @L_31 (PBR * LIQUID 9.99999970D+01 <3>    
+ 1.00000003D+02 <3> 9.99999970D+01 <3> 1.00000003D+02 <3> 4.00000000D+02 <3>    
+ 2.68350720D+04 <3> 3.31830596D+01 <7> 1.15837930D+02 <4> 1.80000000D+00 <5>    
+ 0.D0 1.00000000D+00 0.D0 -9.34067574D+01 <4> -1.39230865D+03 <4>               
+ -3.73627030D+01 <18> -9.04111731D+01 <3> -1.34765687D+00 <3> 1.20543435D-02 <3>
+ 8.08697942D+02 <1> 6.70876800D+01 2.99593500D+01 <7> )                         
+ DSET STREAM MATERIAL OUTPUT RES_STR @L_30 (1.15837930D+02 <4> 1.80000000D+00   
+ <5> 2.68350720D+04 <3> 3.31830596D+01 <7> 4.00000000D+02 <3> 0.D0 )            
+ IDSET ID_59 (PROPERTIES) (757 *1)                                              
+ IDSET ID_60 (PROPERTIES) (36 *2 37 *2 38 *2 39 *2 8103 *2 <10> )               
+ LSET L_32 ( %ID_NCCNS & %ID_60 %ID_59)                                         
+ DSET STREAM MATERIAL FEED STRM_XY @L_32 ( 0.D0 5.00000000D-01 0.D0             
+ 5.00000000D-01 0.D0 5.00000000D-01 0.D0 5.00000000D-01 0.D0 5.00000000D-01     
+ 0.D0 5.00000000D-01 0.D0 6.29797672D-01 0.D0 3.70202328D-01 0.D0 <3>           
+ 1.20105120D+04 <3> 0.D0 <3> 1.48245600D+04 <3> 0 )                             
+ DSET STREAM MATERIAL OUTPUT STRM_XY @L_32 ( 2.49999993D-01 2.50000007D-01      
+ 2.49999993D-01 2.50000007D-01 2.49999993D-01 2.50000007D-01 2.49999993D-01     
+ 2.50000007D-01 2.49999993D-01 2.50000007D-01 2.49999993D-01 2.50000007D-01     
+ 6.09827582D-01 8.21027743D-02 1.68968541D-01 1.39101103D-01 1.80152795D+03 <3> 
+ 6.00525618D+03 <3> 1.16160077D+04 <3> 7.41228022D+03 <3> * )                   
+ IDSET ID_61 (PROPERTIES) (64 *2 <11> 63 *2 <11> 94 *2 <11> 95 *2 <11> 88 *2    
+ <39> 61 *2 <39> 89 *2 <39> 90 *2 <39> 991 *2 <7> 992 *2 <7> 993 *2 <7> 994 *2  
+ <7> 926 *2 <37> 925 *2 <37> 995 *2 <37> 996 *2 <37> 928 *2 927 *2 997 *2 998   
+ *2 2 *2 3 *2 606 *2 <11> 103 *2 <12> 269 *2 1246 *2 <10> 1247 *2 <10> 1248 *2  
+ <12> 1249 *2 <12> 8010 *2 <12> 7007 *2 7008 *2 )                               
+ LSET L_33 ( %ID_61)                                                            
+ DSET STREAM MATERIAL FEED STR_PHAS @L_33 ( 0.D0 <3> 4.00000000D+02 <3>         
+ 4.00000000D+02 <3> 0.D0 <3> * <4> -9.34067574D+01 <4> -9.34067574D+01 <4> * <4>
+ * <3> -9.27562548D+01 <3> -9.27562548D+01 <3> * <3> * <3> 1.22462731D-02 <3>   
+ 1.22462731D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 4.00000000D+02 <3> 2.97863000D+01 <7> 6.70876800D+01 0.D0 <3> 2.68350720D+04   
+ <3> * <7> 3.26629984D+01 <7> 3.26629984D+01 <7> 0.D0 0.D0 )                    
+ DSET STREAM MATERIAL OUTPUT STR_PHAS @L_33 ( 0.D0 <3> 4.00000000D+02 <3>       
+ 4.00000000D+02 <3> 0.D0 <3> * <4> -9.34067574D+01 <4> -9.34067574D+01 <4> * <4>
+ * <3> -9.04111731D+01 <3> -9.04111731D+01 <3> * <3> * <3> 1.20543435D-02 <3>   
+ 1.20543435D-02 <3> * <3> * 6.70876800D+01 6.70876800D+01 * 0.D0 1.00000000D+00 
+ 4.00000000D+02 <3> 2.99593500D+01 <7> 6.70876800D+01 0.D0 <3> 2.68350720D+04   
+ <3> * <7> 3.31830596D+01 <7> 3.31830596D+01 <7> 0.D0 0.D0 )                    
+ IDSET ID_62 (PROPERTIES) (8103 *2 <10> 1265 *2 <10> )                          
+ IDSET ID_63 (HIER-ID) ( PLANT )                                                
+ IDSET ID_64 (STREAM-ID) ( FEED )                                               
+ LSET L_34 ( %ID_63 & %ID_62 & %ID_64)                                          
+ DSET UTIL-SUMMARY FEEDSUM @L_34 ( 2.68350720D+04 <3> 0.D0 <3> )                
+ IDSET ID_65 (HIER-ID) ( PLANT )                                                
+ IDSET ID_66 (STREAM-ID) ( OUTPUT )                                             
+ LSET L_35 ( %ID_65 & %ID_62 & %ID_66)                                          
+ DSET UTIL-SUMMARY PRODSUM @L_35 ( 2.68350720D+04 <3> 0.D0 <3> )                
+ IDSET ID_67 (PROPERTIES) ( 1266 *2 <10> 1267 *2 <10> 1262 *2 <10> 1263 *2 <10> 
+ 1264 *2 <10> 1268 *2 <119> )                                                   
+ LSET L_36 ( %ID_67)                                                            
+ DSET UTIL-SUMMARY PLANTSUM @L_36 ( 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3>
+ 0.D0 <3> )                                                                     
+ IDSET ID_68 (HIER-ID) ( PLANT )                                                
+ LSET L_37 ( %ID_68 & %ID_67)                                                   
+ DSET UTIL-SUMMARY HIERSUM @L_37 ( 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 0.D0 <3> 
+ 0.D0 <3> )                                                                     
+ IDSET RSTAT (PROPERTIES) (739 *1)                                              
+ LSET RSTAT ( %RSTAT)                                                           
+ DSET RUN-STATUS RPTSTAT @RSTAT (0)                                             
+ DSET RUN-STATUS OLDSTAT @STATUS ( 0 0 2 2 0 0 )                                
+ DSET RUN-STATUS STATUS @STATUS ( 8 * * * * * )                                 
+ DSET RUN-STATUS COMPSTAT @L_1 (0)                                              
+ IDSET TSTAT (PROPERTIES) (741 *1)                                              
+ LSET TSTAT ( %TSTAT)                                                           
+ DSET RUN-STATUS TOTSTAT @TSTAT (0)                                             
+ DSET SPSTAT @SPSTAT (0)                                                        
